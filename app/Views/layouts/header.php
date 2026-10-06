@@ -19,6 +19,104 @@
         href="<?= base_url('assets/css/style.css') ?>"
     >
 
+    <style>
+
+        /* =========================
+           MAIN NAVBAR
+        ========================= */
+
+        .site-header {
+            background: #081a2a;
+            border-bottom: 1px solid #123b52;
+        }
+
+        .navbar {
+            padding: 20px 0;
+        }
+
+
+        /* =========================
+           LOGO
+        ========================= */
+
+        .d2-logo {
+            width: 170px;
+            height: auto;
+            max-width: 100%;
+            display: block;
+            object-fit: contain;
+        }
+
+
+        /* =========================
+           NAVIGATION LINKS
+        ========================= */
+
+        .nav-link {
+            color: #ffffff !important;
+            font-size: 15px;
+            font-weight: 600;
+            margin-left: 22px;
+        }
+
+        .nav-link:hover {
+            color: #55d6e8 !important;
+        }
+
+
+        /* =========================
+           CONTACT BUTTON
+        ========================= */
+
+        .contact-button {
+            display: inline-block;
+            padding: 11px 23px;
+            background: #55d6e8;
+            color: #081a2a;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .contact-button:hover {
+            background: #3fc2d5;
+            color: #081a2a;
+        }
+
+
+        /* =========================
+           LOGIN DROPDOWN
+        ========================= */
+
+        .login-dropdown {
+            background: #081a2a;
+            border: 1px solid #123b52;
+        }
+
+        .login-dropdown .dropdown-item {
+            color: #ffffff;
+        }
+
+        .login-dropdown .dropdown-item:hover {
+            background: #123b52;
+            color: #55d6e8;
+        }
+
+
+        /* =========================
+           MOBILE MENU BUTTON
+        ========================= */
+
+        .navbar-toggler {
+            border-color: #55d6e8;
+        }
+
+        .navbar-toggler-icon {
+            filter: brightness(0) invert(1);
+        }
+
+    </style>
+
 </head>
 
 <body>
@@ -32,15 +130,17 @@
             <!-- LOGO -->
 
             <a
-    class="navbar-brand"
-    href="<?= base_url('/') ?>"
->
-    <img
-        src="<?= base_url('assets/images/ameripro-logo.png') ?>"
-        alt="AmeriPro Solutions"
-        class="ameripro-logo"
-    >
-</a>
+                class="navbar-brand"
+                href="<?= base_url('/') ?>"
+            >
+
+                <img
+                    src="<?= base_url('assets/images/design3/ameripro-logo-footer.png') ?>"
+                    class="d2-logo"
+                    alt="AmeriPro"
+                >
+
+            </a>
 
 
             <!-- MOBILE MENU -->
@@ -177,11 +277,11 @@
                             <li>
 
                                 <a
-    class="dropdown-item"
-    href="https://sso.secureserver.net/?realm=pass&app=email"
->
-    Employee
-</a>
+                                    class="dropdown-item"
+                                    href="https://sso.secureserver.net/?realm=pass&app=email"
+                                >
+                                    Employee
+                                </a>
 
                             </li>
 

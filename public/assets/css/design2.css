@@ -33,7 +33,7 @@ img {
 
 .d2-navbar {
     width: 100%;
-    background: #ffffff;
+    background: #075e63;
     border-bottom: 1px solid #e7eaf0;
     position: sticky;
     top: 0;
@@ -70,7 +70,7 @@ img {
 }
 
 .d2-nav-links a:hover {
-    color: #c62828;
+    color: #55d6e8;
 }
 
 .d2-login-btn {
@@ -3612,4 +3612,58 @@ img {
         width: 240px !important;
     }
 
+}
+
+/* =========================
+   DESIGN 2 NAVBAR
+========================= */
+
+.d2-navbar {
+    width: 100%;
+    background: #081a2a;
+    border-bottom: 1px solid #123b52;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+/* =========================
+   DESIGN 2 LOGO
+========================= */
+
+.d2-logo {
+    width: 170px;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+
+/* =========================
+   DESIGN 2 NAV LINKS
+========================= */
+
+.d2-nav-links a {
+    color: #ffffff;
+}
+
+.d2-nav-links a:hover {
+    color: #55d6e8;
+}
+
+
+/* =========================
+   DESIGN 2 LOGIN BUTTON
+========================= */
+
+.d2-login-btn {
+    background: #55d6e8;
+    color: #081a2a;
+}
+
+.d2-login-btn:hover {
+    background: #3fc2d5;
+    color: #081a2a;
 }

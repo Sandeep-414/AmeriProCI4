@@ -39,16 +39,13 @@
 
 
         <!-- LOGO -->
-
-        <a href="<?= base_url('design2') ?>">
-
-            <img
-                src="<?= base_url('assets/images/ameripro-logo.png') ?>"
-                class="d2-logo"
-                alt="AmeriPro"
-            >
-
-        </a>
+<a href="<?= base_url('design2') ?>">
+    <img
+        src="<?= base_url('assets/images/design3/ameripro-logo-footer.png') ?>"
+        class="d2-logo"
+        alt="AmeriPro"
+    >
+</a>
 
 
         <!-- NAVIGATION -->
