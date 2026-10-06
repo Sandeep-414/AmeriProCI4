@@ -21,3 +21,4 @@ annotations:
   anybuild.run/version: 0.33.0
   wasmer.io/version: 7.5.0
 enable_email: true
+enableDatabase: true
