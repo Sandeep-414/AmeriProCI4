@@ -24,12 +24,12 @@ class Database extends Config
      *
      * @var array<string, mixed>
      */
-  public array $default = [
+ public array $default = [
     'DSN'          => '',
-    'hostname'     => env('DB_HOST', env('database.default.hostname', 'localhost')),
-    'username'     => env('DB_USERNAME', env('database.default.username', 'root')),
-    'password'     => env('DB_PASSWORD', env('database.default.password', '')),
-    'database'     => env('DB_NAME', env('database.default.database', 'ameripro_db')),
+    'hostname'     => 'localhost',
+    'username'     => 'root',
+    'password'     => '',
+    'database'     => 'ameripro_db',
     'DBDriver'     => 'MySQLi',
     'DBPrefix'     => '',
     'pConnect'     => false,
@@ -41,7 +41,7 @@ class Database extends Config
     'compress'     => false,
     'strictOn'     => false,
     'failover'     => [],
-    'port'         => (int) env('DB_PORT', env('database.default.port', 3306)),
+    'port'         => 3306,
     'numberNative' => false,
     'foundRows'    => false,
     'dateFormat'   => [
@@ -191,14 +191,39 @@ class Database extends Config
     ];
 
     public function __construct()
-    {
-        parent::__construct();
+{
+    parent::__construct();
 
-        // Ensure that we always set the database group to 'tests' if
-        // we are currently running an automated test suite, so that
-        // we don't overwrite live data on accident.
-        if (ENVIRONMENT === 'testing') {
-            $this->defaultGroup = 'tests';
-        }
+    // Use Wasmer database environment variables when deployed.
+    $this->default['hostname'] = env(
+        'DB_HOST',
+        $this->default['hostname']
+    );
+
+    $this->default['username'] = env(
+        'DB_USERNAME',
+        $this->default['username']
+    );
+
+    $this->default['password'] = env(
+        'DB_PASSWORD',
+        $this->default['password']
+    );
+
+    $this->default['database'] = env(
+        'DB_NAME',
+        $this->default['database']
+    );
+
+    $this->default['port'] = (int) env(
+        'DB_PORT',
+        $this->default['port']
+    );
+
+    // Ensure that we always set the database group to 'tests'
+    // when running the automated test suite.
+    if (ENVIRONMENT === 'testing') {
+        $this->defaultGroup = 'tests';
     }
+}
 }
