@@ -1,39 +1,41 @@
+<!-- Font Awesome Icons -->
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 >
 
 
-<footer class="site-footer">
+<!-- =====================================================
+     DESIGN 2 COMMON FOOTER
+===================================================== -->
 
-    <div class="container">
+<footer class="d2-footer">
 
-        <div class="row gy-4">
+    <div class="d2-footer-container">
+
+        <div class="d2-footer-grid">
 
 
             <!-- =========================================
                  ADDRESS
             ========================================== -->
 
-            <div class="col-lg-5">
+            <div>
 
-                <h6 class="footer-title">
-                    Address:
-                </h6>
+                <h3>
+                    Address
+                </h3>
 
-                <p class="footer-description">
-
-                    2972 Shady View Dr, High Point, NC 27265.
-
+                <p>
+                    2972 Shady View Dr,<br>
+                    High Point, NC 27265.
                 </p>
 
-                <p class="footer-description">
-
+                <p>
                     (336) 790-2875 &amp; (336) 510-9305
-
                 </p>
 
-                <p class="footer-description">
+                <p>
 
                     <a href="mailto:hr@ameripro-solutions.com">
                         hr@ameripro-solutions.com
@@ -44,18 +46,17 @@
             </div>
 
 
-
             <!-- =========================================
                  FOLLOW US
             ========================================== -->
 
-            <div class="col-lg-3 col-md-4">
+            <div>
 
-                <h6 class="footer-title footer-social-title">
-    Follow Us:
-</h6>
+                <h3>
+                    Follow Us
+                </h3>
 
-                <div class="footer-social-icons">
+                <div class="d2-footer-social">
 
                     <a
                         href="#"
@@ -106,22 +107,28 @@
             </div>
 
 
-
             <!-- =========================================
                  OUR PROUD PARTNER
             ========================================== -->
 
-            <div class="col-lg-4 col-md-4">
+            <div class="d2-footer-partner">
 
-                <h6 class="footer-title">
+                <h3>
                     Our Proud Partner
-                </h6>
+                </h3>
 
-  <img
-    src="<?= base_url('assets/images/saas-partner-logo-final.png') ?>"
-    alt="SaaS SoftPro Leaders Pvt. Ltd."
-    class="saas-partner-logo"
->
+                <img
+                    src="<?= base_url('assets/images/saas-partner-logo-final.png') ?>"
+                    alt="SaaS SoftPro Leaders Pvt. Ltd."
+                    class="d2-saas-logo"
+                    style="
+                        width:280px;
+                        max-width:none;
+                        height:auto;
+                        display:block;
+                        margin-top:18px;
+                    "
+                >
 
             </div>
 
@@ -129,17 +136,14 @@
         </div>
 
 
-
         <!-- =========================================
              COPYRIGHT
         ========================================== -->
 
-        <div class="footer-bottom">
+        <div class="d2-footer-bottom">
 
-            <p>
-                © 2011- 2026 AmeriPro Solutions LLC.
-                All Rights Reserved.
-            </p>
+            © 2011- 2026 AmeriPro Solutions LLC.
+            All Rights Reserved.
 
         </div>
 
@@ -147,8 +151,3 @@
     </div>
 
 </footer>
-
-
-<script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-</script>

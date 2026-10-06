@@ -1,0 +1,3615 @@
+/* =====================================================
+   AMERIPRO - DESIGN 2
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172033;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+
+.d2-navbar {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e7eaf0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.d2-nav-container {
+    max-width: 1200px;
+    min-height: 78px;
+    margin: auto;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.d2-logo {
+    width: auto;
+    height: 48px;
+}
+
+.d2-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.d2-nav-links a {
+    color: #172033;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.d2-nav-links a:hover {
+    color: #c62828;
+}
+
+.d2-login-btn {
+    background: #c62828;
+    color: #ffffff !important;
+    padding: 11px 20px;
+    border-radius: 4px;
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.d2-hero {
+    min-height: 600px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #101a2d 0%,
+            #182c4a 55%,
+            #263f60 100%
+        );
+
+    display: flex;
+    align-items: center;
+}
+
+.d2-hero-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 90px 25px;
+}
+
+.d2-hero-content {
+    max-width: 760px;
+}
+
+.d2-small-title {
+    color: #ef5350;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.d2-hero h1 {
+    margin: 0 0 25px;
+
+    color: #ffffff;
+
+    font-size: 58px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.d2-hero p {
+    max-width: 680px;
+
+    color: #d8dfeb;
+
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.d2-primary-btn {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    background: #c62828;
+    color: #ffffff;
+
+    padding: 14px 28px;
+
+    border-radius: 4px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.d2-primary-btn:hover {
+    background: #a91f1f;
+    color: #ffffff;
+}
+
+.d2-secondary-btn {
+    display: inline-block;
+
+    margin-top: 20px;
+    margin-left: 10px;
+
+    border: 1px solid #ffffff;
+
+    color: #ffffff;
+
+    padding: 13px 27px;
+
+    border-radius: 4px;
+
+    font-weight: 700;
+
+    transition: 0.3s ease;
+}
+
+.d2-secondary-btn:hover {
+    background: #ffffff;
+    color: #172033;
+}
+
+
+/* =====================================================
+   COMMON SECTION
+   ===================================================== */
+
+.d2-section {
+    padding: 90px 25px;
+}
+
+.d2-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.d2-section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.d2-section-title span {
+    color: #c62828;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.d2-section-title h2 {
+    margin: 12px 0;
+
+    color: #172033;
+
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.d2-section-title p {
+    max-width: 700px;
+
+    margin: auto;
+
+    color: #687386;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   CARD GRID
+   ===================================================== */
+
+.d2-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.d2-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e8ee;
+
+    padding: 35px;
+
+    transition: 0.3s ease;
+}
+
+.d2-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.d2-card-number {
+    color: #c62828;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.d2-card h3 {
+    margin: 15px 0;
+
+    color: #172033;
+
+    font-size: 22px;
+}
+
+.d2-card p {
+    margin: 0;
+
+    color: #687386;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   DARK SECTION
+   ===================================================== */
+
+.d2-dark-section {
+    background: #101a2d;
+}
+
+.d2-dark-section .d2-section-title h2 {
+    color: #ffffff;
+}
+
+.d2-dark-section .d2-section-title p {
+    color: #cbd3df;
+}
+
+.d2-dark-section .d2-card {
+    background: #17243a;
+    border-color: #2b3a51;
+}
+
+.d2-dark-section .d2-card h3 {
+    color: #ffffff;
+}
+
+.d2-dark-section .d2-card p {
+    color: #b9c4d3;
+}
+
+
+/* =====================================================
+   CTA
+   ===================================================== */
+
+.d2-cta {
+    padding: 70px 25px;
+
+    background: #c62828;
+
+    text-align: center;
+}
+
+.d2-cta h2 {
+    margin: 0 0 15px;
+
+    color: #ffffff;
+
+    font-size: 38px;
+}
+
+.d2-cta p {
+    margin-bottom: 25px;
+
+    color: #ffecec;
+}
+
+.d2-white-btn {
+    display: inline-block;
+
+    background: #ffffff;
+    color: #c62828;
+
+    padding: 14px 28px;
+
+    border-radius: 4px;
+
+    font-weight: 700;
+}
+
+.d2-white-btn:hover {
+    color: #a91f1f;
+}
+
+
+/* =====================================================
+   PAGE HEADER
+   ===================================================== */
+
+.d2-page-header {
+    padding: 100px 25px;
+
+    background: #101a2d;
+
+    text-align: center;
+}
+
+.d2-page-header h1 {
+    margin: 0 0 15px;
+
+    color: #ffffff;
+
+    font-size: 48px;
+}
+
+.d2-page-header p {
+    margin: 0;
+
+    color: #cbd3df;
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   LOGIN
+   ===================================================== */
+
+.d2-login-page {
+    min-height: calc(100vh - 78px);
+
+    background: #f5f7fa;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 60px 20px;
+}
+
+.d2-login-box {
+    width: 100%;
+    max-width: 460px;
+
+    background: #ffffff;
+
+    padding: 45px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.d2-login-box h2 {
+    margin-top: 0;
+
+    text-align: center;
+
+    color: #172033;
+}
+
+.d2-login-box > p {
+    text-align: center;
+
+    color: #687386;
+}
+
+.d2-login-option {
+    display: block;
+
+    margin-top: 18px;
+
+    padding: 20px;
+
+    border: 1px solid #e1e5eb;
+
+    color: #172033;
+
+    transition: 0.3s ease;
+}
+
+.d2-login-option:hover {
+    border-color: #c62828;
+
+    color: #c62828;
+}
+
+
+/* =====================================================
+   FORM
+   ===================================================== */
+
+.d2-form-group {
+    margin-bottom: 20px;
+}
+
+.d2-form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #172033;
+
+    font-weight: 600;
+}
+
+.d2-form-control {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #dfe3e8;
+
+    border-radius: 4px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+.d2-form-control:focus {
+    border-color: #c62828;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+.d2-footer {
+    padding: 60px 25px 25px;
+
+    background: #0b1220;
+
+    color: #ffffff;
+}
+
+.d2-footer-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.d2-footer-grid {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+
+    gap: 40px;
+}
+
+.d2-footer h3 {
+    margin-top: 0;
+
+    color: #ffffff;
+}
+
+.d2-footer p,
+.d2-footer a {
+    color: #aeb8c7;
+
+    line-height: 1.8;
+}
+
+.d2-footer a {
+    display: block;
+}
+
+.d2-footer a:hover {
+    color: #ffffff;
+}
+
+.d2-footer-bottom {
+    margin-top: 40px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #263246;
+
+    text-align: center;
+
+    color: #8994a5;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .d2-nav-links {
+        gap: 15px;
+    }
+
+    .d2-hero h1 {
+        font-size: 45px;
+    }
+
+    .d2-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .d2-footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .d2-nav-container {
+        min-height: auto;
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+    .d2-nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .d2-hero {
+        min-height: 500px;
+    }
+
+    .d2-hero h1 {
+        font-size: 36px;
+    }
+
+    .d2-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .d2-footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .d2-secondary-btn {
+        margin-left: 0;
+    }
+
+    .d2-section-title h2 {
+        font-size: 32px;
+    }
+
+    .d2-page-header h1 {
+        font-size: 38px;
+    }
+}
+
+/* =========================================================
+   DESIGN 2 - FINAL UI POLISH
+   ========================================================= */
+
+.d2-navbar {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.d2-nav-container {
+    max-width: 1200px;
+}
+
+.d2-logo {
+    font-weight: 700;
+    letter-spacing: 0.3px;
+}
+
+.d2-nav-links a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.d2-nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    transition: width 0.3s ease;
+}
+
+.d2-nav-links a:hover::after {
+    width: 100%;
+}
+
+.d2-login-btn {
+    transition: all 0.3s ease;
+}
+
+.d2-login-btn:hover {
+    transform: translateY(-2px);
+}
+
+
+/* HERO */
+
+.d2-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.d2-hero::before {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    right: -180px;
+    top: -150px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.d2-hero::after {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    right: 120px;
+    bottom: -180px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.d2-hero-container {
+    position: relative;
+    z-index: 2;
+}
+
+.d2-hero-content {
+    max-width: 720px;
+}
+
+.d2-hero h1 {
+    letter-spacing: -1px;
+    line-height: 1.1;
+}
+
+.d2-hero p {
+    max-width: 650px;
+    line-height: 1.8;
+}
+
+
+/* BUTTONS */
+
+.d2-primary-btn,
+.d2-secondary-btn,
+.d2-white-btn {
+    transition: all 0.3s ease;
+}
+
+.d2-primary-btn:hover,
+.d2-secondary-btn:hover,
+.d2-white-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* SECTIONS */
+
+.d2-section {
+    position: relative;
+}
+
+.d2-section-title {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.d2-section-title h2 {
+    letter-spacing: -0.5px;
+}
+
+
+/* CARDS */
+
+.d2-grid {
+    align-items: stretch;
+}
+
+.d2-card {
+    height: 100%;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.d2-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.10);
+}
+
+.d2-card-number {
+    transition: transform 0.3s ease;
+}
+
+.d2-card:hover .d2-card-number {
+    transform: translateX(5px);
+}
+
+
+/* DARK SECTION */
+
+.d2-dark-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.d2-dark-section::before {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    left: -180px;
+    top: -150px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+
+/* CTA */
+
+.d2-cta {
+    position: relative;
+    overflow: hidden;
+}
+
+.d2-cta::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    right: -150px;
+    bottom: -180px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* PAGE HEADER */
+
+.d2-page-header {
+    position: relative;
+    overflow: hidden;
+}
+
+.d2-page-header::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    right: -150px;
+    top: -180px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* LOGIN */
+
+.d2-login-page {
+    min-height: calc(100vh - 80px);
+}
+
+.d2-login-box {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.10);
+}
+
+.d2-login-option {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.d2-login-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+.d2-form-control {
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.d2-form-control:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+
+/* FOOTER */
+
+.d2-footer {
+    margin-top: 0;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+    .d2-nav-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .d2-hero {
+        text-align: center;
+    }
+
+    .d2-hero-content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .d2-hero h1 {
+        font-size: 42px;
+    }
+
+    .d2-section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .d2-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .d2-login-box {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+/* =========================================================
+   SERVICES PAGE - MODERN UI
+   ========================================================= */
+
+.d2-page-header {
+    background:
+        radial-gradient(circle at 90% 20%, rgba(255,255,255,0.08) 0 120px, transparent 121px),
+        linear-gradient(135deg, #081426 0%, #13243d 55%, #0b1729 100%);
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 20px;
+}
+
+.d2-page-header h1 {
+    font-size: 54px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+}
+
+.d2-page-header p {
+    font-size: 18px;
+    color: #d5dce8;
+}
+
+
+/* SERVICES MAIN */
+
+.d2-section {
+    background: #f7f9fc;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.d2-section-title {
+    margin-bottom: 55px;
+}
+
+.d2-section-title h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #0c1b32;
+}
+
+.d2-section-title p {
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 720px;
+    margin: auto;
+}
+
+
+/* SERVICE CARDS */
+
+.d2-section .d2-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.d2-section .d2-card {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e3e8ef;
+    border-radius: 18px;
+    padding: 34px;
+    min-height: 280px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(15, 35, 60, 0.06);
+    transition: all 0.35s ease;
+}
+
+.d2-section .d2-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #d12626;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+}
+
+.d2-section .d2-card:hover {
+    transform: translateY(-10px);
+    border-color: #d12626;
+    box-shadow: 0 20px 45px rgba(15, 35, 60, 0.13);
+}
+
+.d2-section .d2-card:hover::before {
+    transform: scaleX(1);
+}
+
+.d2-section .d2-card-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #fff1f1;
+    color: #d12626;
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.d2-section .d2-card h3 {
+    font-size: 24px;
+    color: #0c1b32;
+    margin-bottom: 14px;
+}
+
+.d2-section .d2-card p {
+    color: #64748b;
+    line-height: 1.75;
+}
+
+
+/* APPROACH */
+
+.d2-dark-section {
+    background:
+        radial-gradient(circle at 8% 15%, rgba(255,255,255,0.06) 0 150px, transparent 151px),
+        linear-gradient(135deg, #081426 0%, #101e34 100%);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.d2-dark-section h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.d2-dark-section .d2-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 50px;
+}
+
+.d2-dark-section .d2-card {
+    background: #1b2940;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 18px;
+    padding: 30px;
+    transition: all 0.35s ease;
+}
+
+.d2-dark-section .d2-card:hover {
+    transform: translateY(-8px);
+    background: #24344e;
+    border-color: #d12626;
+}
+
+.d2-dark-section .d2-card-number {
+    color: #ef3434;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.d2-dark-section .d2-card h3 {
+    color: #ffffff;
+    font-size: 21px;
+}
+
+.d2-dark-section .d2-card p {
+    color: #b8c4d5;
+    line-height: 1.7;
+}
+
+
+/* CTA */
+
+.d2-cta {
+    background:
+        radial-gradient(circle at 90% 100%, rgba(255,255,255,0.10) 0 160px, transparent 161px),
+        linear-gradient(135deg, #c91f26 0%, #e12b2b 100%);
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+.d2-cta h2 {
+    font-size: 42px;
+    font-weight: 800;
+}
+
+
+/* SERVICES MOBILE */
+
+@media (max-width: 900px) {
+
+    .d2-section .d2-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .d2-dark-section .d2-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .d2-page-header h1 {
+        font-size: 40px;
+    }
+
+    .d2-section .d2-grid,
+    .d2-dark-section .d2-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .d2-section .d2-card {
+        min-height: auto;
+    }
+
+    .d2-dark-section .d2-card {
+        min-height: auto;
+    }
+
+    .d2-section-title h2,
+    .d2-dark-section h2,
+    .d2-cta h2 {
+        font-size: 32px;
+    }
+}
+
+/* =========================================================
+   SOLUTIONS PAGE - NEW VISUAL DESIGN
+   ========================================================= */
+
+/* HERO */
+
+.d2-page-header {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:
+        radial-gradient(circle at 90% 20%, rgba(255,255,255,0.08) 0 120px, transparent 121px),
+        linear-gradient(135deg, #081426 0%, #13243d 55%, #0b1729 100%);
+    padding: 70px 20px;
+}
+
+.d2-page-header h1 {
+    font-size: 54px;
+    font-weight: 800;
+    margin-bottom: 18px;
+    letter-spacing: -1.5px;
+}
+
+.d2-page-header p {
+    font-size: 18px;
+    color: #d5dce8;
+}
+
+
+/* MAIN SOLUTIONS SECTION */
+
+.d2-section {
+    background: #f7f9fc;
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.d2-section-title {
+    margin-bottom: 55px;
+}
+
+.d2-section-title .d2-small-title {
+    color: #d12626;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.d2-section-title h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #0c1b32;
+    margin-top: 12px;
+    margin-bottom: 18px;
+}
+
+.d2-section-title p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* SOLUTION CARD GRID */
+
+.d2-section .d2-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+
+/* SOLUTION CARDS */
+
+.d2-section .d2-card {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e3e8ef;
+    border-radius: 18px;
+    padding: 34px;
+    min-height: 300px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(15, 35, 60, 0.06);
+    transition: all 0.35s ease;
+}
+
+
+/* RED TOP LINE */
+
+.d2-section .d2-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #d12626;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+}
+
+
+/* LARGE BACKGROUND NUMBER */
+
+.d2-section .d2-card::after {
+    content: "";
+    position: absolute;
+    right: -25px;
+    bottom: -40px;
+    font-size: 150px;
+    font-weight: 900;
+    color: rgba(10, 30, 55, 0.035);
+    line-height: 1;
+    pointer-events: none;
+}
+
+
+/* CARD HOVER */
+
+.d2-section .d2-card:hover {
+    transform: translateY(-10px);
+    border-color: #d12626;
+    box-shadow: 0 20px 45px rgba(15, 35, 60, 0.13);
+}
+
+.d2-section .d2-card:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* CARD NUMBER */
+
+.d2-section .d2-card-number {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #fff1f1;
+    color: #d12626;
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+
+/* CARD TITLE */
+
+.d2-section .d2-card h3 {
+    position: relative;
+    z-index: 2;
+    font-size: 24px;
+    color: #0c1b32;
+    margin-bottom: 14px;
+    font-weight: 750;
+}
+
+
+/* CARD TEXT */
+
+.d2-section .d2-card p {
+    position: relative;
+    z-index: 2;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+
+/* SAP SECTION */
+
+.d2-dark-section {
+    background:
+        radial-gradient(circle at 8% 15%, rgba(255,255,255,0.06) 0 150px, transparent 151px),
+        linear-gradient(135deg, #081426 0%, #101e34 100%);
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.d2-dark-section .d2-small-title {
+    color: #ef3434;
+}
+
+.d2-dark-section h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.d2-dark-section > .d2-container > p {
+    color: #b7c2d3;
+    max-width: 720px;
+    line-height: 1.8;
+}
+
+
+/* SAP CARDS */
+
+.d2-dark-section .d2-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.d2-dark-section .d2-card {
+    background: #1b2940;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 18px;
+    padding: 34px;
+    min-height: 220px;
+    transition: all 0.35s ease;
+}
+
+.d2-dark-section .d2-card:hover {
+    transform: translateY(-8px);
+    background: #24344e;
+    border-color: #d12626;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+.d2-dark-section .d2-card-number {
+    color: #ef3434;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.d2-dark-section .d2-card h3 {
+    color: #ffffff;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.d2-dark-section .d2-card p {
+    color: #b8c4d5;
+    line-height: 1.7;
+}
+
+
+/* CTA */
+
+.d2-cta {
+    background:
+        radial-gradient(circle at 90% 100%, rgba(255,255,255,0.10) 0 160px, transparent 161px),
+        linear-gradient(135deg, #c91f26 0%, #e12b2b 100%);
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+.d2-cta h2 {
+    font-size: 42px;
+    font-weight: 800;
+}
+
+.d2-cta p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .d2-section .d2-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .d2-dark-section .d2-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .d2-page-header {
+        min-height: 250px;
+        padding: 55px 20px;
+    }
+
+    .d2-page-header h1 {
+        font-size: 40px;
+    }
+
+    .d2-page-header p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .d2-section {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .d2-section-title h2 {
+        font-size: 32px;
+    }
+
+    .d2-section .d2-grid,
+    .d2-dark-section .d2-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .d2-section .d2-card {
+        min-height: auto;
+    }
+
+    .d2-dark-section .d2-card {
+        min-height: auto;
+    }
+
+    .d2-cta h2 {
+        font-size: 32px;
+    }
+}
+
+/* =========================================================
+   HOME PAGE - MODERN AMERIPRO UI
+   ========================================================= */
+
+/* HERO */
+
+.d2-hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 610px;
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 82% 35%,
+            rgba(209, 38, 38, 0.18) 0,
+            rgba(209, 38, 38, 0.04) 180px,
+            transparent 320px
+        ),
+        linear-gradient(
+            135deg,
+            #071323 0%,
+            #10223b 55%,
+            #091528 100%
+        );
+}
+
+
+/* DECORATIVE CIRCLES */
+
+.d2-hero::before {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    right: -220px;
+    top: -180px;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow:
+        0 0 0 70px rgba(255,255,255,0.015),
+        0 0 0 140px rgba(255,255,255,0.01);
+}
+
+.d2-hero::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    right: 220px;
+    bottom: -100px;
+    background: rgba(209, 38, 38, 0.12);
+}
+
+
+/* HERO CONTAINER */
+
+.d2-hero-container {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 90px 30px;
+}
+
+
+/* HERO CONTENT */
+
+.d2-hero-content {
+    max-width: 760px;
+}
+
+.d2-small-title {
+    display: inline-block;
+    color: #ef3434;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.d2-hero h1 {
+    font-size: 68px;
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+.d2-hero p {
+    max-width: 680px;
+    color: #c5cfdd;
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+
+/* HERO BUTTONS */
+
+.d2-primary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #d12626;
+    color: #ffffff;
+    border: 2px solid #d12626;
+    border-radius: 6px;
+    padding: 14px 28px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.d2-primary-btn:hover {
+    background: #b91f24;
+    border-color: #b91f24;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(209,38,38,0.25);
+}
+
+.d2-secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 12px;
+    padding: 14px 28px;
+    border: 2px solid rgba(255,255,255,0.35);
+    border-radius: 6px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.d2-secondary-btn:hover {
+    background: #ffffff;
+    color: #0b1729;
+    border-color: #ffffff;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   HOME SERVICES SECTION
+   ========================================================= */
+
+.d2-section {
+    background: #f7f9fc;
+    padding-top: 95px;
+    padding-bottom: 95px;
+}
+
+.d2-section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.d2-section-title h2 {
+    color: #0c1b32;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+}
+
+.d2-section-title p {
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+
+/* HOME CARD GRID */
+
+.d2-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+
+/* HOME CARDS */
+
+.d2-card {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e3e8ef;
+    border-radius: 18px;
+    padding: 34px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(15,35,60,0.05);
+    transition: all 0.35s ease;
+}
+
+.d2-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #d12626;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+}
+
+.d2-card:hover {
+    transform: translateY(-9px);
+    border-color: #d12626;
+    box-shadow: 0 20px 45px rgba(15,35,60,0.12);
+}
+
+.d2-card:hover::before {
+    transform: scaleX(1);
+}
+
+.d2-card-number {
+    color: #d12626;
+    font-size: 15px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.d2-card h3 {
+    color: #0c1b32;
+    font-size: 23px;
+    font-weight: 750;
+    margin-bottom: 12px;
+}
+
+.d2-card p {
+    color: #64748b;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   HOME DARK SECTION
+   ========================================================= */
+
+.d2-dark-section {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(255,255,255,0.06) 0 150px,
+            transparent 151px
+        ),
+        linear-gradient(
+            135deg,
+            #081426 0%,
+            #101e34 100%
+        );
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.d2-dark-section h2 {
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 800;
+}
+
+.d2-dark-section p {
+    color: #b8c4d5;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   HOME CTA
+   ========================================================= */
+
+.d2-cta {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 90% 100%,
+            rgba(255,255,255,0.10) 0 160px,
+            transparent 161px
+        ),
+        linear-gradient(
+            135deg,
+            #c91f26 0%,
+            #e12b2b 100%
+        );
+
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+.d2-cta h2 {
+    color: #ffffff;
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.d2-cta p {
+    color: #ffffff;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 15px auto 30px;
+}
+
+.d2-white-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    color: #d12626;
+    padding: 14px 30px;
+    border-radius: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.d2-white-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+}
+
+
+/* =========================================================
+   HOME RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .d2-hero h1 {
+        font-size: 54px;
+    }
+
+    .d2-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .d2-hero {
+        min-height: 540px;
+        text-align: center;
+    }
+
+    .d2-hero-container {
+        padding: 70px 20px;
+    }
+
+    .d2-hero-content {
+        margin: 0 auto;
+    }
+
+    .d2-hero h1 {
+        font-size: 42px;
+        letter-spacing: -1px;
+    }
+
+    .d2-hero p {
+        font-size: 16px;
+    }
+
+    .d2-secondary-btn {
+        margin-left: 0;
+        margin-top: 12px;
+    }
+
+    .d2-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .d2-section {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .d2-section-title h2,
+    .d2-dark-section h2,
+    .d2-cta h2 {
+        font-size: 32px;
+    }
+}
+
+/* =========================================================
+   ABOUT PAGE - MODERN AMERIPRO UI
+   ========================================================= */
+
+/* ABOUT HERO */
+
+.d2-page-header {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(255,255,255,0.08) 0 120px,
+            transparent 121px
+        ),
+        linear-gradient(
+            135deg,
+            #071323 0%,
+            #13243d 55%,
+            #0b1729 100%
+        );
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 20px;
+}
+
+.d2-page-header h1 {
+    position: relative;
+    z-index: 2;
+    color: #ffffff;
+    font-size: 54px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin-bottom: 18px;
+}
+
+.d2-page-header p {
+    position: relative;
+    z-index: 2;
+    color: #d5dce8;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* ABOUT MAIN SECTION */
+
+.d2-about-section {
+    background: #f7f9fc;
+    padding: 95px 20px;
+}
+
+.d2-about-intro {
+    max-width: 850px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.d2-about-intro .d2-small-title {
+    color: #d12626;
+}
+
+.d2-about-intro h2 {
+    color: #0c1b32;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin: 12px 0 18px;
+}
+
+.d2-about-intro p {
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.85;
+}
+
+
+/* ABOUT INFORMATION CARDS */
+
+.d2-about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.d2-about-card {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #e3e8ef;
+    border-radius: 18px;
+    padding: 35px;
+    min-height: 260px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(15,35,60,0.06);
+    transition: all 0.35s ease;
+}
+
+.d2-about-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: #d12626;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.35s ease;
+}
+
+.d2-about-card:hover {
+    transform: translateY(-9px);
+    border-color: #d12626;
+    box-shadow: 0 20px 45px rgba(15,35,60,0.12);
+}
+
+.d2-about-card:hover::before {
+    transform: scaleX(1);
+}
+
+.d2-about-card-number {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: #fff1f1;
+    color: #d12626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.d2-about-card h3 {
+    color: #0c1b32;
+    font-size: 23px;
+    margin-bottom: 14px;
+}
+
+.d2-about-card p {
+    color: #64748b;
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   OUR APPROACH
+   ========================================================= */
+
+.d2-about-approach {
+    background:
+        radial-gradient(
+            circle at 8% 15%,
+            rgba(255,255,255,0.06) 0 150px,
+            transparent 151px
+        ),
+        linear-gradient(
+            135deg,
+            #081426 0%,
+            #101e34 100%
+        );
+    padding: 100px 20px;
+}
+
+.d2-about-approach-title {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 55px;
+}
+
+.d2-about-approach-title .d2-small-title {
+    color: #ef3434;
+}
+
+.d2-about-approach-title h2 {
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 800;
+    margin: 12px 0;
+}
+
+.d2-about-approach-title p {
+    color: #b8c4d5;
+    line-height: 1.8;
+}
+
+
+/* APPROACH CARDS */
+
+.d2-about-approach-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.d2-about-approach-card {
+    background: #1b2940;
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 18px;
+    padding: 32px;
+    transition: all 0.35s ease;
+}
+
+.d2-about-approach-card:hover {
+    transform: translateY(-8px);
+    background: #24344e;
+    border-color: #d12626;
+}
+
+.d2-about-approach-number {
+    color: #ef3434;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.d2-about-approach-card h3 {
+    color: #ffffff;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.d2-about-approach-card p {
+    color: #b8c4d5;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   CAPABILITIES
+   ========================================================= */
+
+.d2-capabilities {
+    background: #ffffff;
+    padding: 95px 20px;
+}
+
+.d2-capabilities-title {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 55px;
+}
+
+.d2-capabilities-title .d2-small-title {
+    color: #d12626;
+}
+
+.d2-capabilities-title h2 {
+    color: #0c1b32;
+    font-size: 42px;
+    font-weight: 800;
+    margin: 12px 0;
+}
+
+.d2-capabilities-title p {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+
+/* CAPABILITY GRID */
+
+.d2-capabilities-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.d2-capability-item {
+    padding: 28px;
+    border: 1px solid #e3e8ef;
+    border-radius: 14px;
+    background: #f8fafc;
+    transition: all 0.3s ease;
+}
+
+.d2-capability-item:hover {
+    transform: translateY(-5px);
+    border-color: #d12626;
+    box-shadow: 0 12px 30px rgba(15,35,60,0.08);
+}
+
+.d2-capability-item h3 {
+    color: #0c1b32;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.d2-capability-item p {
+    color: #64748b;
+    line-height: 1.65;
+}
+
+
+/* =========================================================
+   ABOUT CTA
+   ========================================================= */
+
+.d2-about-cta {
+    background:
+        radial-gradient(
+            circle at 90% 100%,
+            rgba(255,255,255,0.10) 0 160px,
+            transparent 161px
+        ),
+        linear-gradient(
+            135deg,
+            #c91f26 0%,
+            #e12b2b 100%
+        );
+    text-align: center;
+    padding: 90px 20px;
+}
+
+.d2-about-cta h2 {
+    color: #ffffff;
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.d2-about-cta p {
+    color: #ffffff;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   ABOUT MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .d2-about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .d2-about-approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .d2-capabilities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .d2-page-header h1 {
+        font-size: 40px;
+    }
+
+    .d2-about-section,
+    .d2-about-approach,
+    .d2-capabilities {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .d2-about-intro h2,
+    .d2-about-approach-title h2,
+    .d2-capabilities-title h2,
+    .d2-about-cta h2 {
+        font-size: 32px;
+    }
+
+    .d2-about-grid,
+    .d2-about-approach-grid,
+    .d2-capabilities-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================================================
+   LOGIN PAGE - MODERN AMERIPRO UI
+   ========================================================= */
+
+.d2-login-page {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(209, 38, 38, 0.08) 0 160px,
+            transparent 161px
+        ),
+        linear-gradient(135deg, #f4f7fb 0%, #eef2f7 100%);
+}
+
+
+/* LOGIN BOX */
+
+.d2-login-box {
+    width: 100%;
+    max-width: 850px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 25px 70px rgba(15, 35, 60, 0.12);
+    border: 1px solid #e4e9f0;
+}
+
+
+/* LOGIN TITLE */
+
+.d2-login-box h1 {
+    text-align: center;
+    color: #0c1b32;
+    font-size: 38px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.d2-login-box > p {
+    text-align: center;
+    color: #64748b;
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+
+/* LOGIN OPTIONS */
+
+.d2-login-option {
+    position: relative;
+    display: block;
+    padding: 32px;
+    background: #f8fafc;
+    border: 1px solid #e1e7ef;
+    border-radius: 16px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.d2-login-option::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: #d12626;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+}
+
+.d2-login-option:hover {
+    transform: translateY(-6px);
+    background: #ffffff;
+    border-color: #d12626;
+    box-shadow: 0 15px 35px rgba(15, 35, 60, 0.10);
+}
+
+.d2-login-option:hover::before {
+    transform: scaleY(1);
+}
+
+.d2-login-option h3 {
+    color: #0c1b32;
+    font-size: 23px;
+    font-weight: 750;
+    margin-bottom: 8px;
+}
+
+.d2-login-option p {
+    color: #64748b;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* LOGIN OPTION ICON / NUMBER */
+
+.d2-login-option::after {
+    content: "→";
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #d12626;
+    font-size: 28px;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.d2-login-option:hover::after {
+    transform: translate(7px, -50%);
+}
+
+
+/* FORM */
+
+.d2-form-group {
+    margin-bottom: 22px;
+}
+
+.d2-form-group label {
+    display: block;
+    color: #0c1b32;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.d2-form-control {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d9e0e8;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #0c1b32;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.d2-form-control:focus {
+    border-color: #d12626;
+    box-shadow: 0 0 0 3px rgba(209, 38, 38, 0.10);
+    outline: none;
+}
+
+
+/* LOGIN BUTTON */
+
+.d2-login-box .d2-primary-btn {
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .d2-login-page {
+        padding: 50px 15px;
+    }
+
+    .d2-login-box {
+        padding: 30px 22px;
+    }
+
+    .d2-login-box h1 {
+        font-size: 30px;
+    }
+
+    .d2-login-option {
+        padding: 25px 22px;
+        padding-right: 55px;
+    }
+
+    .d2-login-option h3 {
+        font-size: 20px;
+    }
+
+    .d2-login-option::after {
+        right: 18px;
+    }
+}
+
+/* =========================================================
+   TIMSNAP - CORRECT MODERN UI
+   ========================================================= */
+
+.d2-login-page {
+    min-height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(209, 38, 38, 0.08) 0 160px,
+            transparent 161px
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(10, 35, 65, 0.08) 0 180px,
+            transparent 181px
+        ),
+        #f4f7fb;
+}
+
+
+/* LOGIN CARD */
+
+.d2-login-page .d2-login-box {
+    width: 100%;
+    max-width: 500px;
+
+    background: #ffffff;
+
+    border: 1px solid #e1e7ef;
+    border-radius: 20px;
+
+    padding: 48px;
+
+    box-shadow:
+        0 25px 70px rgba(15, 35, 60, 0.13);
+}
+
+
+/* TITLE */
+
+.d2-login-page .d2-section-title {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+
+/* SMALL TITLE */
+
+.d2-login-page .d2-section-title span {
+    display: inline-block;
+
+    color: #d12626;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+
+/* TIMSNAP TITLE */
+
+.d2-login-page .d2-section-title h2 {
+    color: #0c1b32;
+
+    font-size: 42px;
+    font-weight: 800;
+
+    margin: 0 0 10px;
+
+    letter-spacing: -1px;
+}
+
+
+/* DESCRIPTION */
+
+.d2-login-page .d2-section-title p {
+    color: #687386;
+
+    font-size: 15px;
+
+    margin: 0;
+
+    line-height: 1.6;
+}
+
+
+/* FORM GROUP */
+
+.d2-login-page .d2-form-group {
+    margin-bottom: 22px;
+}
+
+
+/* LABEL */
+
+.d2-login-page .d2-form-group label {
+    display: block;
+
+    color: #0c1b32;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    margin-bottom: 8px;
+}
+
+
+/* INPUT */
+
+.d2-login-page .d2-form-control {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 15px 16px;
+
+    border: 1px solid #d8e0e9;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #0c1b32;
+
+    font-size: 15px;
+
+    transition: all 0.3s ease;
+}
+
+
+/* INPUT FOCUS */
+
+.d2-login-page .d2-form-control:focus {
+    outline: none;
+
+    border-color: #d12626;
+
+    box-shadow:
+        0 0 0 3px rgba(209, 38, 38, 0.10);
+}
+
+
+/* PLACEHOLDER */
+
+.d2-login-page .d2-form-control::placeholder {
+    color: #9aa5b5;
+}
+
+
+/* LOGIN BUTTON CONTAINER */
+
+.d2-login-page .d2-login-box > div[style*="text-align:center"] {
+    margin-top: 28px;
+}
+
+
+/* LOGIN BUTTON */
+
+.d2-login-page .d2-primary-btn {
+    min-width: 180px;
+
+    padding: 14px 35px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #d12626;
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.d2-login-page .d2-primary-btn:hover {
+    background: #b91f24;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(209, 38, 38, 0.25);
+}
+
+
+/* BACK LINK */
+
+.d2-login-page .d2-login-box a {
+    color: #687386 !important;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.d2-login-page .d2-login-box a:hover {
+    color: #d12626 !important;
+}
+
+
+/* SMALL CARD ACCENT */
+
+.d2-login-page .d2-login-box {
+    position: relative;
+    overflow: hidden;
+}
+
+.d2-login-page .d2-login-box::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background: linear-gradient(
+        90deg,
+        #d12626,
+        #ef3434
+    );
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .d2-login-page {
+        padding: 50px 15px;
+    }
+
+    .d2-login-page .d2-login-box {
+        padding: 35px 22px;
+    }
+
+    .d2-login-page .d2-section-title h2 {
+        font-size: 34px;
+    }
+
+    .d2-login-page .d2-primary-btn {
+        width: 100%;
+    }
+}
+/* =========================================================
+   SERVICE DETAIL PAGE
+   ========================================================= */
+
+.d2-detail-header {
+    text-align: center;
+}
+
+.d2-detail-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.18);
+
+    color: #ffffff;
+
+    font-weight: 800;
+    font-size: 15px;
+}
+
+
+/* OVERVIEW */
+
+.d2-detail-overview {
+    background: #ffffff;
+    padding: 90px 20px;
+}
+
+.d2-detail-intro {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.d2-detail-intro h2 {
+    color: #0c1b32;
+    font-size: 36px;
+    line-height: 1.3;
+    font-weight: 800;
+    margin: 15px 0 25px;
+}
+
+.d2-detail-intro p {
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+
+/* DETAIL SECTION */
+
+.d2-detail-section {
+    background: #f7f9fc;
+    padding: 90px 20px;
+}
+
+.d2-detail-section-title {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.d2-detail-section-title h2 {
+    color: #0c1b32;
+    font-size: 42px;
+    font-weight: 800;
+    margin: 12px 0 15px;
+}
+
+.d2-detail-section-title p {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+
+/* CAPABILITY CARDS */
+
+.d2-detail-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.d2-detail-card {
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+
+    padding: 30px;
+
+    min-height: 150px;
+
+    transition: all 0.3s ease;
+}
+
+.d2-detail-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #d12626;
+
+    box-shadow:
+        0 18px 40px rgba(15,35,60,0.10);
+}
+
+.d2-detail-card-number {
+    color: #d12626;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    margin-bottom: 18px;
+}
+
+.d2-detail-card h3 {
+    color: #0c1b32;
+
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+
+/* BUSINESS VALUE */
+
+.d2-detail-dark {
+    background:
+        radial-gradient(
+            circle at 8% 10%,
+            rgba(255,255,255,0.06) 0 150px,
+            transparent 151px
+        ),
+        linear-gradient(
+            135deg,
+            #081426,
+            #101e34
+        );
+
+    padding: 100px 20px;
+}
+
+.d2-detail-dark .d2-detail-section-title h2 {
+    color: #ffffff;
+}
+
+.d2-detail-dark .d2-detail-section-title p {
+    color: #b8c4d5;
+}
+
+
+/* BENEFITS */
+
+.d2-benefit-grid {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.d2-benefit-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background: #1b2940;
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    transition: all 0.3s ease;
+}
+
+.d2-benefit-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #d12626;
+
+    background: #24344e;
+}
+
+.d2-benefit-number {
+    color: #ef3434;
+
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.d2-benefit-card p {
+    color: #ffffff;
+
+    margin: 0;
+
+    line-height: 1.6;
+}
+
+
+/* APPROACH */
+
+.d2-detail-approach {
+    background: #ffffff;
+
+    padding: 95px 20px;
+}
+
+.d2-approach-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.d2-approach-card {
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    padding: 30px;
+
+    background: #f8fafc;
+
+    transition: all 0.3s ease;
+}
+
+.d2-approach-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #d12626;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 15px 35px rgba(15,35,60,0.08);
+}
+
+.d2-approach-card > span {
+    color: #d12626;
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.d2-approach-card h3 {
+    color: #0c1b32;
+
+    font-size: 21px;
+
+    margin: 18px 0 10px;
+}
+
+.d2-approach-card p {
+    color: #64748b;
+
+    line-height: 1.7;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .d2-detail-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .d2-approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .d2-detail-overview,
+    .d2-detail-section,
+    .d2-detail-dark,
+    .d2-detail-approach {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .d2-detail-intro h2 {
+        font-size: 28px;
+    }
+
+    .d2-detail-section-title h2 {
+        font-size: 32px;
+    }
+
+    .d2-detail-grid,
+    .d2-benefit-grid,
+    .d2-approach-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================================================
+   SOLUTION DETAIL PAGE
+========================================================= */
+
+.d2-solution-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.d2-solution-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.d2-solution-link .d2-card-more {
+    display: block;
+    margin-top: 25px;
+    color: #d12626;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.d2-solution-link:hover .d2-card-more {
+    color: #a91e1e;
+    transform: translateX(5px);
+}
+
+
+/* =========================================================
+   SOLUTION DETAIL HEADER
+========================================================= */
+
+.d2-detail-header {
+    text-align: center;
+}
+
+.d2-detail-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 20px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.18);
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   DETAIL OVERVIEW
+========================================================= */
+
+.d2-detail-overview {
+    background: #ffffff;
+    padding: 90px 20px;
+}
+
+.d2-detail-intro {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.d2-detail-intro h2 {
+    color: #0c1b32;
+    font-size: 36px;
+    line-height: 1.3;
+    font-weight: 800;
+    margin: 15px 0 25px;
+}
+
+.d2-detail-intro p {
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   DETAIL SECTIONS
+========================================================= */
+
+.d2-detail-section {
+    background: #f7f9fc;
+    padding: 90px 20px;
+}
+
+.d2-detail-section-title {
+    max-width: 800px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.d2-detail-section-title h2 {
+    color: #0c1b32;
+    font-size: 42px;
+    font-weight: 800;
+    margin: 12px 0 15px;
+}
+
+.d2-detail-section-title p {
+    color: #64748b;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   DETAIL CARDS
+========================================================= */
+
+.d2-detail-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.d2-detail-card {
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+
+    padding: 30px;
+
+    min-height: 150px;
+
+    transition: all 0.3s ease;
+}
+
+.d2-detail-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #d12626;
+
+    box-shadow:
+        0 18px 40px rgba(15,35,60,0.10);
+}
+
+.d2-detail-card-number {
+    color: #d12626;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    margin-bottom: 18px;
+}
+
+.d2-detail-card h3 {
+    color: #0c1b32;
+
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   BUSINESS BENEFITS
+========================================================= */
+
+.d2-detail-dark {
+    background:
+        radial-gradient(
+            circle at 8% 10%,
+            rgba(255,255,255,0.06) 0 150px,
+            transparent 151px
+        ),
+        linear-gradient(
+            135deg,
+            #081426,
+            #101e34
+        );
+
+    padding: 100px 20px;
+}
+
+.d2-detail-dark .d2-detail-section-title h2 {
+    color: #ffffff;
+}
+
+.d2-detail-dark .d2-detail-section-title p {
+    color: #b8c4d5;
+}
+
+.d2-benefit-grid {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.d2-benefit-card {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    background: #1b2940;
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    transition: all 0.3s ease;
+}
+
+.d2-benefit-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #d12626;
+
+    background: #24344e;
+}
+
+.d2-benefit-number {
+    color: #ef3434;
+
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.d2-benefit-card p {
+    color: #ffffff;
+
+    margin: 0;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   APPROACH SECTION
+========================================================= */
+
+.d2-detail-approach {
+    background: #ffffff;
+    padding: 95px 20px;
+}
+
+.d2-approach-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 22px;
+}
+
+.d2-approach-card {
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    padding: 30px;
+
+    background: #f8fafc;
+
+    transition: all 0.3s ease;
+}
+
+.d2-approach-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #d12626;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 15px 35px rgba(15,35,60,0.08);
+}
+
+.d2-approach-card > span {
+    color: #d12626;
+
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.d2-approach-card h3 {
+    color: #0c1b32;
+
+    font-size: 21px;
+
+    margin: 18px 0 10px;
+}
+
+.d2-approach-card p {
+    color: #64748b;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .d2-detail-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .d2-approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .d2-detail-overview,
+    .d2-detail-section,
+    .d2-detail-dark,
+    .d2-detail-approach {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .d2-detail-intro h2 {
+        font-size: 28px;
+    }
+
+    .d2-detail-section-title h2 {
+        font-size: 32px;
+    }
+
+    .d2-detail-grid,
+    .d2-benefit-grid,
+    .d2-approach-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* =========================================
+   DESIGN 2 - PARTNER ALIGNMENT
+========================================= */
+
+/* =========================================
+   DESIGN 2 - PARTNER ALIGNMENT
+========================================= */
+
+.d2-footer-partner {
+    margin-left: auto;
+    padding-left: 100px;
+    transform: translateX(80px);
+}
+
+.d2-footer-partner .d2-saas-logo {
+    width: 280px !important;
+    max-width: none !important;
+    height: auto !important;
+}
+/* =========================================
+   DESIGN 2 - CAREERS PAGE SPACING FIX
+========================================= */
+
+.d2-page-hero {
+    padding: 55px 20px 50px !important;
+    min-height: auto !important;
+}
+
+.d2-page-hero .d2-section-title {
+    margin-bottom: 0 !important;
+}
+
+.d2-page-hero .d2-section-title h1 {
+    margin-top: 12px !important;
+    margin-bottom: 15px !important;
+}
+
+.d2-page-hero .d2-section-title p {
+    margin-bottom: 0 !important;
+}
+
+
+/* Careers main section */
+
+.d2-section {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+
+/* Careers cards */
+
+.d2-grid {
+    gap: 26px;
+}
+
+.d2-card {
+    padding: 32px;
+}
+
+
+/* =========================================
+   CAREERS MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .d2-page-hero {
+        padding: 40px 20px 35px !important;
+    }
+
+    .d2-page-hero .d2-section-title h1 {
+        font-size: 36px;
+    }
+
+    .d2-section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+}
+/* =========================================
+   DESIGN 2 - FOOTER FIX
+========================================= */
+
+.d2-footer {
+    background: #081225;
+    color: #ffffff;
+    padding: 55px 0 20px;
+}
+
+.d2-footer-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.d2-footer-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1.2fr;
+    gap: 70px;
+    align-items: start;
+}
+
+
+/* Footer headings */
+
+.d2-footer h3 {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 20px;
+}
+
+
+/* Footer text */
+
+.d2-footer p {
+    color: #aebbd0;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0 0 12px;
+}
+
+
+/* Email */
+
+.d2-footer p a {
+    color: #aebbd0;
+    text-decoration: none;
+}
+
+.d2-footer p a:hover {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   SOCIAL ICONS - HORIZONTAL + CENTER
+========================================= */
+
+.d2-footer-grid > div:nth-child(2) {
+    text-align: center;
+}
+
+.d2-footer-social {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: center !important;
+    gap: 18px;
+    margin-top: 5px;
+}
+
+.d2-footer-social a {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    color: #aebbd0;
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition: 0.3s ease;
+}
+
+.d2-footer-social a:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   PARTNER LOGO
+========================================= */
+
+.d2-footer-partner {
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+    transform: none !important;
+}
+
+.d2-footer-partner .d2-saas-logo {
+    width: 280px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block;
+    margin-top: 18px;
+}
+
+
+/* =========================================
+   COPYRIGHT
+========================================= */
+
+.d2-footer-bottom {
+    margin-top: 45px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    text-align: center;
+
+    color: #aebbd0;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .d2-footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .d2-footer-grid > div:nth-child(2) {
+        text-align: center;
+    }
+
+    .d2-footer-social {
+        justify-content: center !important;
+    }
+
+    .d2-footer-partner .d2-saas-logo {
+        width: 240px !important;
+    }
+
+}
