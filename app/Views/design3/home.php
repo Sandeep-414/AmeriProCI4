@@ -37,7 +37,7 @@
     <nav class="d3-nav">
 
         <a href="<?= base_url('design3') ?>" class="active">
-            Home
+            Home 
         </a>
 
         <a href="<?= base_url('design3/about') ?>">
