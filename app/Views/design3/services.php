@@ -12,6 +12,12 @@
 
     <title>AmeriPro | Services</title>
 
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+
     <link
         rel="stylesheet"
         href="<?= base_url('assets/css/design3.css') ?>"
@@ -40,82 +46,111 @@
 
     </a>
 
+<nav class="d3-nav">
 
-    <nav class="d3-nav">
-
-        <a href="<?= base_url('design3') ?>">
-            Home
-        </a>
-
-        <a href="<?= base_url('design3/about') ?>">
-            About Us
-        </a>
-
-        <div class="d3-nav-dropdown">
-
-    <a
-        href="<?= base_url('design3/services') ?>"
-        class="d3-dropdown active"
-    >
-        Services
-        <span>⌄</span>
+    <a href="<?= base_url('design3') ?>">
+        Home
     </a>
 
-    <div class="d3-dropdown-menu">
+    <a href="<?= base_url('design3/about') ?>" class="active">
+        About Us
+    </a>
 
-        <a href="<?= base_url('design3/services/application-development') ?>">
-            Application Development
+    <!-- SERVICES DROPDOWN -->
+    <div class="d3-nav-dropdown">
+
+        <a href="<?= base_url('design3/services') ?>" class="d3-dropdown">
+            Services
+            <i class="fa-solid fa-chevron-down d3-nav-chevron"
+               aria-hidden="true"></i>
         </a>
 
-        <a href="<?= base_url('design3/services/application-maintenance') ?>">
-            Application Maintenance
-        </a>
+        <div class="d3-dropdown-menu">
 
-        <a href="<?= base_url('design3/services/business-intelligence') ?>">
-            Business Intelligence
-        </a>
+            <a href="<?= base_url('design3/services/application-development') ?>">
+                Application Development
+            </a>
 
-        <a href="<?= base_url('design3/services/cloud-computing') ?>">
-            Cloud Computing
-        </a>
+            <a href="<?= base_url('design3/services/application-maintenance') ?>">
+                Application Maintenance
+            </a>
 
-        <a href="<?= base_url('design3/services/infrastructure-management') ?>">
-            Infrastructure Management
-        </a>
+            <a href="<?= base_url('design3/services/business-intelligence') ?>">
+                Business Intelligence
+            </a>
 
-        <a href="<?= base_url('design3/services/product-application-testing') ?>">
-            Product &amp; Application Testing
-        </a>
+            <a href="<?= base_url('design3/services/cloud-computing') ?>">
+                Cloud Computing
+            </a>
 
-        <a href="<?= base_url('design3/services/strategic-resourcing') ?>">
-            Strategic Resourcing
-        </a>
+            <a href="<?= base_url('design3/services/infrastructure-management') ?>">
+                Infrastructure Management
+            </a>
 
-        <a href="<?= base_url('design3/services/website-development') ?>">
-            Website Development
-        </a>
+            <a href="<?= base_url('design3/services/product-application-testing') ?>">
+                Product &amp; Application Testing
+            </a>
+
+            <a href="<?= base_url('design3/services/strategic-resourcing') ?>">
+                Strategic Resourcing
+            </a>
+
+            <a href="<?= base_url('design3/services/website-development') ?>">
+                Website Development
+            </a>
+
+        </div>
 
     </div>
 
-</div>
+    <!-- SOLUTIONS DROPDOWN -->
+    <div class="d3-nav-dropdown">
 
-        <a
-            href="<?= base_url('design3/solutions') ?>"
-            class="d3-dropdown"
-        >
+        <a href="<?= base_url('design3/solutions') ?>" class="d3-dropdown">
             Solutions
-            <span>⌄</span>
+            <i class="fa-solid fa-chevron-down d3-nav-chevron"
+               aria-hidden="true"></i>
         </a>
 
-        <a href="<?= base_url('design3/careers') ?>">
-            Careers
-        </a>
+        <div class="d3-dropdown-menu">
 
-        <a href="<?= base_url('design3/contact') ?>">
-            Contact Us
-        </a>
+            <a href="<?= base_url('design3/solutions/automated-messaging') ?>">
+                Automated Messaging
+            </a>
 
-    </nav>
+            <a href="<?= base_url('design3/solutions/data-warehousing') ?>">
+                Data Warehousing
+            </a>
+
+            <a href="<?= base_url('design3/solutions/sap-solutions') ?>">
+                SAP Solutions
+            </a>
+
+            <a href="<?= base_url('design3/solutions/gis-solutions') ?>">
+                GIS Solutions
+            </a>
+
+            <a href="<?= base_url('design3/solutions/crm') ?>">
+                CRM
+            </a>
+
+            <a href="<?= base_url('design3/solutions/document-management') ?>">
+                Document Management
+            </a>
+
+        </div>
+
+    </div>
+
+    <a href="<?= base_url('design3/careers') ?>">
+        Careers
+    </a>
+
+    <a href="<?= base_url('design3/contact') ?>">
+        Contact Us
+    </a>
+
+</nav>
 
 
     <div class="d3-header-right">

@@ -337,6 +337,11 @@ $biProductionSupport = [
         AmeriPro | <?= esc($service['title']) ?>
     </title>
 
+       <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+
     <link
         rel="stylesheet"
         href="<?= base_url('assets/css/design3.css') ?>"
@@ -365,42 +370,38 @@ $biProductionSupport = [
 
     </a>
 
+<nav class="d3-nav">
 
-    <nav class="d3-nav">
+    <a href="<?= base_url('design3') ?>">
+        Home
+    </a>
 
-        <a href="<?= base_url('design3') ?>">
-            Home
-        </a>
+    <a href="<?= base_url('design3/about') ?>">
+        About Us
+    </a>
 
-        <a href="<?= base_url('design3/about') ?>">
-            About Us
-        </a>
+    <a href="<?= base_url('design3/services') ?>" class="d3-dropdown active">
+        Services
+        <i class="fa-solid fa-chevron-down d3-nav-chevron"
+           aria-hidden="true"></i>
+    </a>
 
-        <a
-            href="<?= base_url('design3/services') ?>"
-            class="d3-dropdown active"
-        >
-            Services
-            <span>⌄</span>
-        </a>
+    <a href="<?= base_url('design3/solutions') ?>" class="d3-dropdown">
+        Solutions
+        <i class="fa-solid fa-chevron-down d3-nav-chevron"
+           aria-hidden="true"></i>
+    </a>
 
-        <a
-            href="<?= base_url('design3/solutions') ?>"
-            class="d3-dropdown"
-        >
-            Solutions
-            <span>⌄</span>
-        </a>
+    <a href="<?= base_url('design3/careers') ?>">
+        Careers
+    </a>
 
-        <a href="<?= base_url('design3/careers') ?>">
-            Careers
-        </a>
+    <a href="<?= base_url('design3/contact') ?>">
+        Contact Us
+    </a>
 
-        <a href="<?= base_url('design3/contact') ?>">
-            Contact Us
-        </a>
+</nav>
 
-    </nav>
 
 
     <div class="d3-header-right">

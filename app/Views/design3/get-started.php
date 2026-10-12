@@ -1,66 +1,27 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
-
-
 <head>
-
-
-
-
-
     <meta charset="UTF-8">
-
-
-
     <meta name="viewport"
-
           content="width=device-width, initial-scale=1.0">
-
-
 
     <title>Get Started | AmeriPro Solutions</title>
 
-
-
-
-
-    <!-- =====================================================
-
-         BOOTSTRAP 5
-
-    ====================================================== -->
-
-
-
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
     <link
 
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
 
         rel="stylesheet">
-
-
-
-
-
-    <!-- =====================================================
-
-         EXISTING DESIGN 3 CSS
-
-    ====================================================== -->
-
-
-
-    <link
+       <link
 
         rel="stylesheet"
 
         href="<?= base_url('assets/css/design3.css') ?>?v=<?= time() ?>">
-
-
-
-
 
         <link
 
@@ -69,44 +30,8 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap-icons\@1.11.3/font/bootstrap-icons.min.css"
 
 >
-
-
-
-
-
-    <!-- =====================================================
-
-         GET STARTED PAGE BOOTSTRAP OVERRIDES
-
-         No new CSS file
-
-    ====================================================== -->
-
-
-
-        <!-- Get Started styles are maintained in design3.css -->
-
-
-
-
-</head>
-
-
-
-
-
+     </head>
 <body class="d3-get-started-page">
-
-
-
-
-
-
-
-
-
-
-
 <!-- =====================================================
 
      NAVBAR
@@ -158,22 +83,18 @@
 
 
         <a href="<?= base_url('design3/services') ?>" class="d3-dropdown">
-
-            Services
-
-            <span>⌄</span>
-
-        </a>
+    Services
+    <i class="fa-solid fa-chevron-down d3-nav-chevron"
+       aria-hidden="true"></i>
+</a>
 
 
 
-        <a href="<?= base_url('design3/solutions') ?>" class="d3-dropdown">
-
-            Solutions
-
-            <span>⌄</span>
-
-        </a>
+      <a href="<?= base_url('design3/solutions') ?>" class="d3-dropdown">
+    Solutions
+    <i class="fa-solid fa-chevron-down d3-nav-chevron"
+       aria-hidden="true"></i>
+</a>
 
 
 

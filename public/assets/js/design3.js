@@ -556,7 +556,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.setInterval(function () {
             currentIndex = (currentIndex + 1) % slides.length;
             showSlide(currentIndex);
-        }, 4500);
+        }, 6000);
     }
 
     if (document.readyState === "loading") {

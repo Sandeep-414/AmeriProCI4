@@ -1629,14 +1629,13 @@ scroll-behavior:auto !important;
 ===================================================== */
 
 
+
 /* =====================================================
-   SERVICES HERO
+   DESIGN 3 - SERVICES HERO IMAGE UPDATE
 ===================================================== */
 
 .d3-services-hero {
-
     position: relative;
-
     width: 100%;
     height: 560px;
 
@@ -1647,12 +1646,17 @@ scroll-behavior:auto !important;
     overflow: hidden;
 
     background-image:
-        url('../images/design3/about-bg.png');
+        linear-gradient(
+            rgba(8, 24, 43, 0.25),
+            rgba(8, 24, 43, 0.25)
+        ),
+        url('../images/design3/s2.png');
 
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 
 
 /* =====================================================
@@ -2367,7 +2371,7 @@ color: #657585;
     justify-content: center;
 
     background-image:
-        url('../images/design3/about-bg.png');
+        url('../images/design3/s2.png');
 
     background-position: center;
     background-size: cover;
@@ -10069,40 +10073,6 @@ body.d3-get-started-page .d3-gs-title {
     font-size: 11px;
 }
 
-/* ================= CENTER SCROLL + OUR SERVICES BUTTON ================= */
-.d3-scroll {
-    left: 50% !important;
-    right: auto !important;
-    bottom: 92px !important;
-    transform: translateX(-50%) !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-}
-
-.d3-home-content .d3-home-button {
-    display: flex !important;
-    width: max-content !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-@media (max-width: 700px) {
-    .d3-scroll {
-        left: 50% !important;
-        bottom: 92px !important;
-        transform: translateX(-50%) !important;
-        flex-direction: row !important;
-        text-align: center !important;
-    }
-
-    .d3-home-content .d3-home-button {
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-}
-
-
 /* =====================================================
    DESIGN 3 - HAMBURGER SLIDE-OUT MENU
    Single clean version — panel sits above the header
@@ -10365,121 +10335,6 @@ body.d3-menu-open {
 
 
 
-/* =====================================================
-   DESIGN 3 HOME HERO - CONSOLIDATED BUTTON + SCROLL LAYOUT
-   Order from top to bottom:
-   SCROLL TO EXPLORE
-   OUR SERVICES button
-   AMERIPRO SOLUTIONS section
-===================================================== */
-
-/* Keep hero controls positioned inside the hero, not over the text/image. */
-.d3-hero {
-    position: relative;
-    overflow: hidden;
-}
-
-/* The content wrapper must not become the button's positioning parent.
-   The slide becomes the containing block for the absolute button. */
-.d3-hero .d3-slide .d3-home-content {
-    position: static !important;
-}
-
-/* Place OUR SERVICES at the bottom of the hero, centered horizontally. */
-.d3-hero .d3-slide .d3-home-content .d3-home-button {
-    position: absolute !important;
-    left: 50% !important;
-    right: auto !important;
-    top: auto !important;
-    bottom: 12px !important;
-    display: inline-flex !important;
-    width: max-content !important;
-    margin: 0 !important;
-    transform: translateX(-50%) !important;
-    z-index: 25 !important;
-}
-
-/* Place SCROLL TO EXPLORE above the button. */
-.d3-hero > .d3-scroll,
-.d3-hero .d3-scroll {
-    position: absolute !important;
-    left: 50% !important;
-    right: auto !important;
-    top: auto !important;
-    bottom: 78px !important;
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 10px !important;
-    width: max-content !important;
-    max-width: calc(100% - 30px) !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    transform: translateX(-50%) !important;
-    color: #102944 !important;
-    white-space: nowrap !important;
-    z-index: 26 !important;
-}
-
-/* Keep the intro heading below the hero without extra compensating offsets. */
-.d3-intro-section {
-    position: relative;
-}
-
-/* Tablet */
-@media (max-width: 1000px) {
-    .d3-hero .d3-slide .d3-home-content .d3-home-button {
-        bottom: 12px !important;
-    }
-
-    .d3-hero > .d3-scroll,
-    .d3-hero .d3-scroll {
-        bottom: 78px !important;
-        font-size: 12px !important;
-    }
-}
-
-/* Mobile */
-@media (max-width: 700px) {
-    .d3-hero {
-        min-height: 680px;
-    }
-
-    .d3-hero .d3-slide .d3-home-content .d3-home-button {
-        bottom: 12px !important;
-        left: 50% !important;
-        margin: 0 !important;
-        transform: translateX(-50%) !important;
-    }
-
-    .d3-hero > .d3-scroll,
-    .d3-hero .d3-scroll {
-        bottom: 78px !important;
-        left: 50% !important;
-        font-size: 11px !important;
-        gap: 8px !important;
-        transform: translateX(-50%) !important;
-    }
-}
-
-
-/* Preserve the button's centered position while its entrance animation runs. */
-.d3-slide.active .d3-home-content .d3-home-button {
-    animation: d3CenteredButtonIn 0.8s ease 0.7s forwards !important;
-}
-
-@keyframes d3CenteredButtonIn {
-    from {
-        opacity: 0;
-        transform: translate(-50%, 14px);
-    }
-    to {
-        opacity: 1;
-        transform: translate(-50%, 0);
-    }
-}
-
 /* FIX: Reduce space between testimonials and Our Clients */
 
 .d3-testimonials-section {
@@ -10567,4 +10422,117 @@ body.d3-menu-open {
 .d3-nav .d3-nav-dropdown:hover > .d3-dropdown .d3-nav-chevron,
 .d3-nav .d3-nav-dropdown.d3-dropdown-open > .d3-dropdown .d3-nav-chevron {
     transform: rotate(225deg);
+}
+
+
+/* =========================================
+   DESIGN 3 - HERO ALIGNMENT (MANAGER CHANGE 2)
+   One authoritative rule set: button stays in the left content flow;
+   scroll prompt is centered at the bottom of the hero.
+========================================= */
+
+.d3-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Keep the CTA below the description, aligned with the left content. */
+.d3-hero .d3-slide .d3-home-content .d3-home-button {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    display: inline-flex !important;
+    align-self: flex-start !important;
+    width: max-content !important;
+    margin: 0 !important;
+    transform: translateX(-45px);
+    z-index: 6 !important;
+}
+
+/* Preserve the existing CTA entrance animation without centering transforms. */
+.d3-slide.active .d3-home-content .d3-home-button {
+    animation: d3TextIn 0.8s ease 0.7s forwards !important;
+}
+
+/* Center SCROLL TO EXPLORE horizontally at the bottom of the hero. */
+.d3-hero > .d3-scroll,
+.d3-hero .d3-scroll {
+    position: absolute !important;
+    left: 50% !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: 20px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: max-content !important;
+    max-width: calc(100% - 30px) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    z-index: 26 !important;
+}
+
+@media (max-width: 1000px) {
+    .d3-hero .d3-slide .d3-home-content .d3-home-button {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        margin: 0 !important;
+    }
+
+    .d3-hero > .d3-scroll,
+    .d3-hero .d3-scroll {
+        bottom: 20px !important;
+        font-size: 12px !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .d3-hero > .d3-scroll,
+    .d3-hero .d3-scroll {
+        left: 50% !important;
+        bottom: 20px !important;
+        gap: 8px !important;
+        font-size: 11px !important;
+        transform: translateX(-50%) !important;
+    }
+}
+
+
+/* DESIGN 3 - FONT AWESOME DROPDOWN ICONS */
+
+.d3-nav .d3-dropdown {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.d3-nav .d3-dropdown .d3-nav-chevron {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    line-height: 1;
+    width: 11px;
+    height: 11px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: none;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+
+.d3-nav .d3-nav-dropdown:hover > .d3-dropdown .d3-nav-chevron {
+    transform: rotate(180deg);
 }

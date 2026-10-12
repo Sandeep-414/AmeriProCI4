@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
 
+<head>
     <meta charset="UTF-8">
 
     <meta name="viewport"
@@ -10,10 +10,15 @@
 
     <title>AmeriPro - Design 3</title>
 
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Design 3 CSS -->
     <link rel="stylesheet"
           href="<?= base_url('assets/css/design3.css') ?>">
-
 </head>
+
 
 <body>
 
@@ -46,10 +51,13 @@
 
         <div class="d3-nav-dropdown">
 
+
 <a href="<?= base_url('design3/services') ?>" class="d3-dropdown">
     Services
-    <span class="d3-nav-chevron" aria-hidden="true"></span>
+    <i class="fa-solid fa-chevron-down d3-nav-chevron"
+       aria-hidden="true"></i>
 </a>
+
 
     <div class="d3-dropdown-menu">
 
@@ -91,10 +99,13 @@
 
        <div class="d3-nav-dropdown">
 
-  <a href="<?= base_url('design3/solutions') ?>" class="d3-dropdown">
+
+<a href="<?= base_url('design3/solutions') ?>" class="d3-dropdown">
     Solutions
-    <span class="d3-nav-chevron" aria-hidden="true"></span>
+    <i class="fa-solid fa-chevron-down d3-nav-chevron"
+       aria-hidden="true"></i>
 </a>
+
 
     <div class="d3-dropdown-menu">
 
@@ -611,7 +622,7 @@
     </div>
 
     <div class="d3-client-card">
-        <img src="<?= base_url('assets/images/design3/church.png') ?>"
+        <img src="<?= base_url('assets/images/design3/chruch.png') ?>"
              alt="Church Community Builder">
     </div>
 
