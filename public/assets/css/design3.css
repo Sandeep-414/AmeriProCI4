@@ -8378,8 +8378,8 @@ body.d3-get-started-page .d3-gs-title {
 
 
 
-    color: #555555 !important;
-
+color: #ffffff !important;
+text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 
 
     font-size: clamp(42px, 5vw, 60px) !important;
@@ -9669,14 +9669,17 @@ body.d3-get-started-page .d3-gs-company {
     font-size: 15px !important;
     line-height: 1.4 !important;
 }
+/* GET STARTED HEADING - RED */
 body.d3-get-started-page h1.d3-gs-title {
-    position: static !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    color: #555 !important;
+    color: #ff1744 !important;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.65) !important;
     font-size: clamp(36px, 4vw, 62px) !important;
     line-height: 1.08 !important;
     font-weight: 800 !important;
+}
+
+body.d3-get-started-page h1.d3-gs-title span {
+    color: #ff1744 !important;
 }
 body.d3-get-started-page h1.d3-gs-title span { color: #ed1b3b !important; }
 @media (max-width: 1100px) {
