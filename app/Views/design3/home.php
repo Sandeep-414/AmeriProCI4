@@ -251,12 +251,12 @@
         class="d3-image-slide active">
 
     <img
-        src="<?= base_url('assets/images/design3/design3-slide2.png') ?>"
+        src="<?= base_url('assets/images/design3/s2.png') ?>"
         alt="AmeriPro cloud technology"
         class="d3-image-slide">
 
     <img
-        src="<?= base_url('assets/images/design3/design3-slide3.png') ?>"
+        src="<?= base_url('assets/images/design3/s3.png') ?>"
         alt="AmeriPro team collaboration"
         class="d3-image-slide">
 
