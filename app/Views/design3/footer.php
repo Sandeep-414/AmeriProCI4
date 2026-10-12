@@ -2,18 +2,28 @@
      DESIGN 3 FOOTER
 ====================================================== -->
 
+<!-- BOOTSTRAP ICONS FOR FOOTER -->
+<link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+>
+
+
 <footer class="d3-footer">
 
     <div class="d3-footer-container">
 
 
-        <!-- COMPANY -->
+        <!-- =================================================
+             COMPANY
+        ================================================== -->
 
         <div class="d3-footer-company">
 
             <img
-        src="<?= base_url('assets/images/design3/ameripro-logo-footer.png') ?>"
-    alt="AmeriPro Solutions">
+                src="<?= base_url('assets/images/design3/ameripro-logo.png') ?>"
+                alt="AmeriPro Solutions"
+            >
 
             <p>
                 2972 Shady View Dr,<br>
@@ -31,17 +41,30 @@
 
             <div class="d3-social-links">
 
-                <a href="#">f</a>
-                <a href="#">𝕏</a>
-                <a href="#">in</a>
-                <a href="#">◎</a>
+                <a href="#" aria-label="Facebook">
+                    f
+                </a>
+
+                <a href="#" aria-label="X">
+                    𝕏
+                </a>
+
+                <a href="#" aria-label="LinkedIn">
+                    in
+                </a>
+
+                <a href="#" aria-label="Instagram">
+                    ◎
+                </a>
 
             </div>
 
         </div>
 
 
-        <!-- QUICK LINKS -->
+        <!-- =================================================
+             QUICK LINKS
+        ================================================== -->
 
         <div class="d3-footer-column">
 
@@ -49,34 +72,78 @@
                 QUICK LINKS
             </h3>
 
+
             <a href="<?= base_url('design3') ?>">
-                Home
+
+                <i class="bi bi-house-door-fill"></i>
+
+                <span>
+                    Home
+                </span>
+
             </a>
+
 
             <a href="<?= base_url('design3/about') ?>">
-                About Us
+
+                <i class="bi bi-person-fill"></i>
+
+                <span>
+                    About Us
+                </span>
+
             </a>
+
 
             <a href="<?= base_url('design3/careers') ?>">
-                Careers
+
+                <i class="bi bi-briefcase-fill"></i>
+
+                <span>
+                    Careers
+                </span>
+
             </a>
+
 
             <a href="<?= base_url('design3/contact') ?>">
-                Contact Us
+
+                <i class="bi bi-envelope-fill"></i>
+
+                <span>
+                    Contact Us
+                </span>
+
             </a>
+
 
             <a href="<?= base_url('design3/services/application-development') ?>">
-                Application Development
+
+                <i class="bi bi-code-slash"></i>
+
+                <span>
+                    Application Development
+                </span>
+
             </a>
 
+
             <a href="<?= base_url('design3/services/application-maintenance') ?>">
-                Application Maintenance
+
+                <i class="bi bi-gear-fill"></i>
+
+                <span>
+                    Application Maintenance
+                </span>
+
             </a>
 
         </div>
 
 
-        <!-- SERVICES -->
+        <!-- =================================================
+             SERVICES
+        ================================================== -->
 
         <div class="d3-footer-column">
 
@@ -84,34 +151,78 @@
                 SERVICES
             </h3>
 
+
             <a href="<?= base_url('design3/services/business-intelligence') ?>">
-                Business Intelligence
+
+                <i class="bi bi-bar-chart-fill"></i>
+
+                <span>
+                    Business Intelligence
+                </span>
+
             </a>
+
 
             <a href="<?= base_url('design3/services/cloud-computing') ?>">
-                Cloud Computing
+
+                <i class="bi bi-cloud-fill"></i>
+
+                <span>
+                    Cloud Computing
+                </span>
+
             </a>
+
 
             <a href="<?= base_url('design3/services/infrastructure-management') ?>">
-                Infrastructure Management
+
+                <i class="bi bi-hdd-rack-fill"></i>
+
+                <span>
+                    Infrastructure Management
+                </span>
+
             </a>
+
 
             <a href="<?= base_url('design3/services/product-application-testing') ?>">
-                Product & Application Testing
+
+                <i class="bi bi-check2-circle"></i>
+
+                <span>
+                    Product & Application Testing
+                </span>
+
             </a>
+
 
             <a href="<?= base_url('design3/services/strategic-resourcing') ?>">
-                Strategic Resourcing
+
+                <i class="bi bi-people-fill"></i>
+
+                <span>
+                    Strategic Resourcing
+                </span>
+
             </a>
 
+
             <a href="<?= base_url('design3/services/website-development') ?>">
-                Website Development
+
+                <i class="bi bi-globe2"></i>
+
+                <span>
+                    Website Development
+                </span>
+
             </a>
 
         </div>
 
 
-        <!-- SOLUTIONS -->
+        <!-- =================================================
+             SOLUTIONS
+        ================================================== -->
 
         <div class="d3-footer-column">
 
@@ -119,28 +230,70 @@
                 SOLUTIONS
             </h3>
 
+
             <a href="<?= base_url('design3/solutions/automated-messaging') ?>">
-                Automated Messaging
+
+                <i class="bi bi-chat-dots-fill"></i>
+
+                <span>
+                    Automated Messaging
+                </span>
+
             </a>
+
 
             <a href="<?= base_url('design3/solutions/data-warehousing') ?>">
-                Data Warehousing
+
+                <i class="bi bi-database-fill"></i>
+
+                <span>
+                    Data Warehousing
+                </span>
+
             </a>
+
 
             <a href="<?= base_url('design3/solutions/sap-solutions') ?>">
-                SAP Solutions
+
+                <i class="bi bi-box-fill"></i>
+
+                <span>
+                    SAP Solutions
+                </span>
+
             </a>
+
 
             <a href="<?= base_url('design3/solutions/gis-solutions') ?>">
-                GIS Solutions
+
+                <i class="bi bi-geo-alt-fill"></i>
+
+                <span>
+                    GIS Solutions
+                </span>
+
             </a>
+
 
             <a href="<?= base_url('design3/solutions/crm') ?>">
-                CRM
+
+                <i class="bi bi-person-lines-fill"></i>
+
+                <span>
+                    CRM
+                </span>
+
             </a>
 
+
             <a href="<?= base_url('design3/solutions/document-management') ?>">
-                Document Management
+
+                <i class="bi bi-file-earmark-text-fill"></i>
+
+                <span>
+                    Document Management
+                </span>
+
             </a>
 
         </div>
@@ -148,7 +301,9 @@
     </div>
 
 
-    <!-- COPYRIGHT -->
+    <!-- =================================================
+         COPYRIGHT
+    ================================================== -->
 
     <div class="d3-footer-bottom">
 
@@ -158,3 +313,57 @@
     </div>
 
 </footer>
+
+<!-- =====================================================
+     DESIGN 3 - SCROLL UP NAVBAR
+====================================================== -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navbar = document.querySelector(".d3-header");
+
+    if (!navbar) {
+        return;
+    }
+
+    let lastScrollTop = 0;
+
+    window.addEventListener("scroll", function () {
+
+        const currentScroll =
+            window.pageYOffset ||
+            document.documentElement.scrollTop;
+
+        /* At the top */
+        if (currentScroll <= 20) {
+
+            navbar.classList.remove("d3-nav-hidden");
+            navbar.classList.remove("d3-nav-visible");
+
+            lastScrollTop = currentScroll;
+            return;
+        }
+
+        /* Scrolling UP */
+        if (currentScroll < lastScrollTop) {
+
+            navbar.classList.remove("d3-nav-hidden");
+            navbar.classList.add("d3-nav-visible");
+
+        }
+
+        /* Scrolling DOWN */
+        else if (currentScroll > lastScrollTop) {
+
+            navbar.classList.remove("d3-nav-visible");
+            navbar.classList.add("d3-nav-hidden");
+
+        }
+
+        lastScrollTop = currentScroll;
+
+    });
+
+});
+</script>

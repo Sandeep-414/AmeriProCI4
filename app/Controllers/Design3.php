@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 use App\Models\ContactMessageModel;
+use App\Models\Design3GetStartedModel;
 
 class Design3 extends BaseController
 {
@@ -90,8 +91,40 @@ public function contactSubmit()
         );
 }
 
-public function login()
+
+ // =====================================================
+    // GET STARTED
+    // =====================================================
+
+    public function getStarted()
+    {
+        return view('design3/get-started');
+    }
+
+public function getStartedSubmit()
 {
-    return view('design3/login');
+    $model = new Design3GetStartedModel();
+
+    $data = [
+        'name'            => $this->request->getPost('name'),
+        'email'           => $this->request->getPost('email'),
+        'contact'         => $this->request->getPost('contact'),
+        'city_country'    => $this->request->getPost('city_country'),
+        'project_type'    => $this->request->getPost('project_type'),
+        'budget'          => $this->request->getPost('budget'),
+        'message'         => $this->request->getPost('message'),
+        'phone_preferred' => $this->request->getPost('phone_preferred') ? 'Yes' : 'No'
+    ];
+
+    // Insert into database
+    $model->insert($data);
+
+    // Redirect back to Design 3 Get Started page
+    return redirect()
+        ->to('/design3/get-started')
+        ->with(
+            'success',
+            'Thank you! Your project details have been submitted successfully.'
+        );
 }
 }

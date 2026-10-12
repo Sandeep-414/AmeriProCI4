@@ -10,6 +10,8 @@ position:relative;width:100%;min-height:100vh;margin:0;padding:0;
 background:#eef3f5;overflow:hidden;
 }
 
+
+
 /* ================= HEADER ================= */
 
 
@@ -169,7 +171,7 @@ font-weight:800;letter-spacing:3px;
 }
 
 .d3-home-eyebrow::before{
-content:"";width:35px;height:2px;background:#f47b20;
+content:"";width:35px;height:2px;background:#ed1b45;
 }
 
 .d3-home-content h1{
@@ -201,12 +203,14 @@ letter-spacing:1px;white-space:nowrap;
 box-sizing:border-box;
 box-shadow:0 10px 25px rgba(16,41,68,.16);
 transition:background .3s ease,transform .3s ease,box-shadow .3s ease;
+
 }
 
+
 .d3-home-button:hover{
-background:#f47b20;color:#fff;
+background:#ed1b45;color:#fff;
 transform:translateY(-3px);
-box-shadow:0 12px 30px rgba(244,123,32,.25);
+box-shadow:0 12px 30px rgba(237,27,69,.25);
 }
 
 .d3-home-button .d3-button-text{
@@ -217,11 +221,18 @@ font-weight:800;letter-spacing:1px;
 line-height:1;white-space:nowrap;transform:none;
 }
 
+
+.d3-home-button {
+    position: relative;
+    z-index: 6;
+    margin-bottom: 0;
+}
+
 .d3-home-button .d3-button-arrow{
 width:42px;height:42px;min-width:42px;
 padding:0;margin:0;display:flex;
 align-items:center;justify-content:center;
-background:#fff;color:#f47b20;
+background:#fff;color:#ed1b45;
 border-radius:50%;font-size:18px;
 line-height:1;transform:none;
 transition:transform .3s ease;
@@ -234,19 +245,22 @@ transform:rotate(45deg);
 
 /* ================= HERO IMAGE ================= */
 
-.d3-home-image{
-position:relative;width:100%;height:72%;
-min-height:470px;overflow:hidden;
-border-radius:35px;
-box-shadow:0 30px 70px rgba(16,41,68,.17);
-transform:translateX(35px);
+.d3-home-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    object-position: center;
+    transform: scale(1);
+    transition: transform 1.4s ease;
 }
 
-.d3-home-image::before{
-content:"";position:absolute;inset:0;
-border:1px solid rgba(255,255,255,.5);
-border-radius:inherit;z-index:2;pointer-events:none;
-}
+
 
 .d3-home-image::after{
 content:"";position:absolute;inset:0;
@@ -257,15 +271,23 @@ rgba(16,41,68,.08)
 );
 pointer-events:none;
 }
-
-.d3-home-image img{
-width:100%;height:100%;display:block;
-object-fit:cover;transform:scale(1.08);
-transition:transform 1.4s ease;
+.d3-home-image {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border: none;
+    border-radius: 35px;
+    box-shadow: none;
+    transform: none;
+    background: transparent;
 }
 
 .d3-slide.active .d3-home-image img{
-transform:scale(1);
+transform:scale(1.03);
 }
 
 
@@ -278,6 +300,8 @@ transform:scale(1);
 opacity:0;
 transform:translateX(-45px);
 }
+
+
 
 .d3-slide.active .d3-home-eyebrow{
 animation:d3TextIn .7s ease forwards;
@@ -314,17 +338,16 @@ transform:translateX(0);
 animation:d3ImageIn 1s ease forwards;
 }
 
-@keyframes d3ImageIn{
-from{
-opacity:0;
-transform:translateX(45px) scale(.96);
+@keyframes d3ImageIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
-to{
-opacity:1;
-transform:translateX(0) scale(1);
-}
-}
-
 
 /* ================= INDICATORS ================= */
 
@@ -343,8 +366,8 @@ cursor:pointer;transition:all .3s ease;
 }
 
 .d3-indicator.active{
-height:30px;background:#f47b20;
-border-color:#f47b20;border-radius:10px;
+height:30px;background:#ed1b45;
+border-color:#ed1b45;border-radius:10px;
 }
 
 
@@ -365,17 +388,27 @@ width:40px;height:1px;background:#aab7c0;
 
 /* ================= SCROLL ================= */
 
-.d3-scroll{
-position:absolute;left:6%;bottom:35px;
-z-index:20;display:flex;align-items:center;
-gap:10px;color:#52677a;font-size:10px;
-font-weight:700;letter-spacing:2px;
+
+.d3-scroll {
+    position: absolute;
+    left: 8%;
+    bottom: 20px;
+    transform: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    z-index: 5;
 }
 
-.d3-scroll-arrow{
-font-size:18px;
-animation:d3Scroll 1.5s ease-in-out infinite;
+
+.d3-scroll-arrow {
+    display: block;
+    font-size: 24px;
+    line-height: 1;
+    text-align: center;
 }
+
 
 @keyframes d3Scroll{
 0%,100%{transform:translateY(0);}
@@ -396,7 +429,7 @@ max-width:1000px;margin:auto;
 }
 
 .d3-section-label{
-display:block;color:#f47b20;
+display:block;color:#ed1b45;
 font-size:13px;font-weight:700;
 letter-spacing:2px;margin-bottom:18px;
 }
@@ -420,7 +453,7 @@ color:#666;font-size:17px;line-height:1.8;
 
 
 .d3-section-heading span{
-color:#f47b20;font-size:13px;
+color:#ed1b45;font-size:13px;
 font-weight:700;letter-spacing:2px;
 }
 
@@ -440,7 +473,7 @@ font-weight:600;
 
 .d3-service-icon svg{
 width:48px;height:48px;
-fill:none;stroke:#f47b20;
+fill:none;stroke:#ed1b45;
 stroke-width:2;
 stroke-linecap:round;
 stroke-linejoin:round;
@@ -451,7 +484,7 @@ stroke-linejoin:round;
 .d3-service-line{
 display:block;width:40px;height:2px;
 margin:0 auto 22px;
-background:#f47b20;
+background:#ed1b45;
 }
 
 
@@ -460,7 +493,7 @@ background:#f47b20;
 display:inline-flex;
 align-items:center;gap:8px;
 margin-top:25px;
-color:#f47b20;
+color:#ed1b45;
 font-size:14px;
 font-weight:700;
 }
@@ -486,7 +519,7 @@ text-align:center;margin-bottom:55px;
 }
 
 .d3-testimonial-heading span{
-color:#f47b20;font-size:13px;
+color:#ed1b45;font-size:13px;
 font-weight:700;letter-spacing:2px;
 }
 
@@ -503,7 +536,7 @@ gap:40px;
 }
 
 .d3-quote{
-color:#f47b20;font-family:Georgia,serif;
+color:#ed1b45;font-family:Georgia,serif;
 font-size:130px;line-height:.6;opacity:.9;
 }
 
@@ -545,11 +578,11 @@ gap:8px;margin-top:45px;
 .d3-testimonial-dots span{
 width:11px;height:11px;
 border-radius:50%;
-border:1px solid #f47b20;
+border:1px solid #ed1b45;
 }
 
 .d3-testimonial-dots span.active{
-background:#f47b20;
+background:#ed1b45;
 }
 
 
@@ -655,7 +688,7 @@ font-weight:800;
 }
 
 .addox{
-color:#ef7618;font-size:32px;
+color:#ed1b45;font-size:32px;
 letter-spacing:7px;
 }
 
@@ -769,8 +802,8 @@ transition:all .3s ease;
 }
 
 .d3-social-links a:hover{
-background:#f47b20;
-border-color:#f47b20;
+background:#ed1b45;
+border-color:#ed1b45;
 transform:translateY(-3px);
 }
 
@@ -782,7 +815,7 @@ gap:13px;
 
 .d3-footer-column h3 {
 margin: 0 0 15px !important;
-    color: #f47b20;
+    color: #ed1b45;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 1.5px;
@@ -796,15 +829,6 @@ color: rgba(255,255,255,.82);
     margin-bottom: 7px !important;
     transition: all .3s ease;
 }
-
-
-.d3-footer-column a::before{
-content:"›";
-color:#f47b20;
-margin-right:9px;
-font-size:17px;
-}
-
 .d3-footer-column a:hover{
 color:#fff;
 transform:translateX(4px);
@@ -942,9 +966,8 @@ display:none;
 
 @media (max-width:700px){
 
-.d3-hero{
-min-height:800px;
-height:auto;
+.d3-hero {
+    position: relative;
 }
 
 .d3-header{
@@ -986,9 +1009,19 @@ border-radius:20px;
 right:18px;
 }
 
-.d3-scroll{
-display:none;
+
+.d3-scroll {
+    position: absolute;
+    left: 55px;
+    bottom: 28px;
+    transform: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    z-index: 5;
 }
+
 
 .d3-slide-counter{
 right:25px;
@@ -1025,9 +1058,7 @@ font-size:28px;
 font-size:32px;
 }
 
-.d3-footer{
-padding:60px 20px 25px;
-}
+
 
 .d3-footer-container{
 grid-template-columns:1fr;
@@ -1078,30 +1109,292 @@ scroll-behavior:auto !important;
     margin: 0 auto;
 }
 
+
+/* CENTER OUR SERVICES SECTION HEADING */
+
 .d3-section-heading {
-text-align: center;
-    max-width: 800px;
-    margin: 0 auto 55px;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
-.d3-section-heading h2,
-.d3-about-highlight h2 {
-    margin: 0 0 20px;
-    color: #102944;
-    font-size: clamp(32px, 4vw, 50px);
-    line-height: 1.15;
+.d3-section-heading span {
+    display: block;
+    text-align: center;
 }
 
-.d3-section-heading p {
-    margin: 0;
-    color: #667085;
-    font-size: 17px;
-    line-height: 1.8;
+.d3-section-heading h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 
+/* =========================================================
+   FOOTER LINK ICONS
+========================================================= */
+/* =========================================================
+   DESIGN 3 - FOOTER
+   FINAL CLEAN VERSION - NO DUPLICATES
+========================================================= */
+
+.d3-footer {
+    background: #071b2e;
+    color: #ffffff;
+    padding: 55px 0 0;
+}
+
+/* ================= FOOTER CONTAINER ================= */
+
+.d3-footer-container {
+    width: min(1200px, calc(100% - 60px));
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 55px;
+
+    align-items: start;
+}
+
+/* ================= COMPANY ================= */
+
+.d3-footer-company {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.d3-footer-company img {
+    width: 190px;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    background: transparent;
+}
+
+.d3-footer-company p {
+    margin: 0 0 10px;
+    color: #d5e2ec;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* ================= SOCIAL ICONS ================= */
+
+.d3-social-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.d3-social-links a {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,.25);
+    border-radius: 50%;
+
+    background: transparent;
+    color: #ffffff;
+
+    font-size: 14px;
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+.d3-social-links a:hover {
+    background: #ed1b45;
+    border-color: #ed1b45;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* ================= FOOTER COLUMNS ================= */
+
+.d3-footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* ================= HEADINGS ================= */
+
+.d3-footer-column h3 {
+    position: relative;
+
+    margin: 0 0 25px;
+
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Red line under heading */
+
+.d3-footer-column h3::after {
+    content: "";
+
+    display: block;
+
+    width: 38px;
+    height: 3px;
+
+    margin-top: 9px;
+
+    background: #ed1b45;
+    border-radius: 3px;
+}
+
+/* ================= FOOTER LINKS ================= */
+
+.d3-footer-column a {
+    display: flex !important;
+    align-items: center !important;
+
+    width: 100%;
+
+    gap: 10px;
+
+    margin: 0 0 15px !important;
+    padding: 0 !important;
+
+    color: #c9d7e2 !important;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    text-decoration: none !important;
+
+    transition: color 0.25s ease,
+                transform 0.25s ease;
+}
+
+/* ================= FOOTER ICONS ================= */
+
+.d3-footer-column a i {
+    display: inline-flex !important;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 20px;
+    min-width: 20px;
+
+    color: #ed1b45 !important;
+
+    font-size: 15px;
+
+    line-height: 1;
+
+    flex-shrink: 0;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    transition: color 0.25s ease,
+                transform 0.25s ease;
+}
+
+/* Text stays beside icon */
+
+.d3-footer-column a span {
+    display: inline-block;
+}
+
+/* ================= HOVER ================= */
+
+.d3-footer-column a:hover {
+    color: #ffffff !important;
+    transform: translateX(4px);
+}
+
+.d3-footer-column a:hover i {
+    color: #ffffff !important;
+    transform: scale(1.15);
+}
+
+/* ================= FOOTER BOTTOM ================= */
+
+.d3-footer-bottom {
+    width: min(1200px, calc(100% - 60px));
+
+    margin: 30px auto 0;
+
+    padding: 18px 0;
+
+    border-top: 1px solid rgba(255,255,255,.12);
+
+    text-align: left;
+
+    background: transparent;
+
+    color: #9fb1bf;
+
+    font-size: 13px;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 1000px) {
+
+    .d3-footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 45px;
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .d3-footer {
+        padding-top: 50px;
+    }
+
+    .d3-footer-container {
+        width: calc(100% - 40px);
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .d3-footer-company img {
+        width: 170px;
+    }
+
+    .d3-footer-bottom {
+        width: calc(100% - 40px);
+        margin-top: 35px;
+        text-align: center;
+        line-height: 1.6;
+    }
+
+}
+
+
+/* HOVER */
+
+.d3-footer-column a:hover {
+    color: #ffffff;
+    padding-left: 4px;
+}
+
+
+.d3-footer-column a:hover i {
+    color: #ffffff;
+    transform: scale(1.15);
+}
 
 
 
@@ -1140,7 +1433,7 @@ text-align: center;
 
     overflow: hidden;
 
-    background-image: url('../images/design3/about-bg.png');
+    background-image: url('../images/design3/about.png');
 
     background-position: center;
     background-size: cover;
@@ -1296,7 +1589,7 @@ text-align: center;
 
 
 .d3-about-breadcrumb-links a:hover {
-    color: #f47b20;
+    color: #ed1b45;
 }
 
 
@@ -1545,7 +1838,7 @@ text-align: center;
 
 .d3-services-breadcrumb-links a:hover {
 
-    color: #f47b20;
+    color: #ed1b45;
 }
 
 
@@ -1627,13 +1920,53 @@ text-align: center;
    SERVICES GRID
 ===================================================== */
 
+
+/* FIX: Services cards layout */
 .d3-services-grid {
-max-width: 1180px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 22px;
+    width: 100%;
+    max-width: 1180px;
+    margin: 40px auto 0 !important;
+    padding: 0 20px;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 300px)) !important;
+    justify-content: center !important;
+    align-items: stretch;
+    gap: 24px;
+    box-sizing: border-box;
 }
+
+/* Restore the individual card appearance */
+.d3-service-card {
+    width: 100%;
+    min-width: 0;
+    min-height: 400px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 34px 28px;
+    background: #fff;
+    border: 1px solid #e1eaf0;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(16, 41, 68, 0.08);
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .d3-services-grid {
+        grid-template-columns: repeat(2, minmax(0, 300px)) !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    .d3-services-grid {
+        grid-template-columns: minmax(0, 1fr) !important;
+        max-width: 420px;
+    }
+}
+
 
 
 
@@ -2217,7 +2550,7 @@ color: #657585;
 
 .d3-service-detail-breadcrumb a:hover {
 
-    color: #f47b20;
+    color: #ed1b45;
 }
 
 
@@ -4358,7 +4691,7 @@ position: static;
     overflow: hidden;
 
     background-image:
-        url('../images/design3/about-bg.png');
+        url('../images/design3/carrer.png');
 
     background-position: center;
     background-size: cover;
@@ -4974,7 +5307,7 @@ position: static;
     overflow: hidden;
 
     background-image:
-        url('../images/design3/about-bg.png');
+        url('../images/design3/contactus.png');
 
     background-position: center;
     background-size: cover;
@@ -6408,53 +6741,276 @@ display: flex;
     color: #ed1b45 !important;
     padding-left: 25px !important;
 }
+/* =========================================================
+   DESIGN 3 FOOTER
+   AmeriPro Logo Colors - Blue / Red / White
+========================================================= */
 
-/* Reduce footer height */
-
-.d3-footer .d3-footer-company img {
-    width: 260px !important;
-    height: auto !important;
-    max-width: 100% !important;
-    display: block !important;
-    object-fit: contain !important;
-    margin: 0 0 28px 0 !important;
-    transform: translateX(-40px) !important;
+.d3-footer {
+    background: #071b2e;
+    color: #ffffff;
+    padding: 70px 0 0;
 }
 
-/* Keep dropdowns and hero containers from clipping the dropdown menu */
-.d3-home,
-.d3-hero,
-.d3-header,
-.d3-nav {
-    overflow: visible !important;
-}
 
-.d3-home .d3-services-grid {
-    max-width: 1180px;
-    width: 100%;
+/* =========================================================
+   FOOTER CONTAINER
+========================================================= */
+
+.d3-footer-container {
+    max-width: 1200px;
+
     margin: 0 auto;
+
+    padding: 0 30px;
+
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 30px;
+
+    grid-template-columns:
+        1.4fr
+        1fr
+        1fr
+        1fr;
+
+    gap: 55px;
 }
 
-.d3-software-image {
-    overflow: hidden !important;
+
+/* =========================================================
+   COMPANY
+========================================================= */
+
+.d3-footer-company img {
+    width: 190px;
+
+    height: auto;
+
+    margin-bottom: 25px;
 }
 
-.d3-software-image img {
-    width: 100%;
-    height: 100%;
+
+.d3-footer-company p {
+    margin: 0 0 16px;
+
+    color: #d5e2ec;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   FOOTER HEADINGS
+========================================================= */
+
+
+
+
+/* RED LINE UNDER HEADING */
+
+.d3-footer-column h3::after {
+    content: "";
+
     display: block;
-    object-fit: cover;
-    animation: d3SoftwareFloat 10s ease-in-out infinite alternate;
-    transform-origin: center center;
+
+    width: 38px;
+
+    height: 3px;
+
+    margin-top: 9px;
+
+    background: #ed1b3b;
+
+    border-radius: 3px;
 }
 
-@keyframes d3SoftwareFloat {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.04) translateX(-0.5%); }
-    100% { transform: scale(1.08) translateX(0.5%); }
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.d3-footer-column a {
+    display: block;
+
+    margin-bottom: 13px;
+
+    color: #c9d7e2;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+
+.d3-footer-column a:hover {
+    color: #ed1b3b;
+
+    padding-left: 5px;
+}
+
+
+/* =========================================================
+   SOCIAL LINKS
+========================================================= */
+
+.d3-social-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+
+.d3-social-links a {
+    width: 38px;
+
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,.25);
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+
+.d3-social-links a:hover {
+    background: #ed1b3b;
+
+    border-color: #ed1b3b;
+
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   FOOTER BOTTOM
+========================================================= */
+
+.d3-footer-bottom {
+    margin-top: 55px;
+
+    padding: 20px 15px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255,255,255,.12);
+
+    background: #051525;
+
+    color: #9fb1bf;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .d3-footer-container {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 40px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .d3-footer {
+        padding-top: 50px;
+    }
+
+    .d3-footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 0 25px;
+    }
+
+    .d3-footer-company img {
+        width: 170px;
+    }
+
+    .d3-footer-bottom {
+        margin-top: 40px;
+
+        line-height: 1.6;
+    }
+
+}
+/* =========================================================
+   FOOTER LOGO - MOVE SLIGHTLY LEFT
+========================================================= */
+
+.d3-footer-company img {
+    position: relative;
+    left: -25px;
+}
+
+
+/* =========================================================
+   FOOTER LINK ICONS
+========================================================= */
+
+.d3-footer-column a {
+    position: relative;
+
+    display: flex !important;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+    color: #c9d7e2;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+
+/* HOVER */
+
+
+
+
+.d3-footer-column a:hover::before {
+    color: #ffffff;
+
+    transform: translateX(4px);
 }
 /* =========================================================
    DESIGN 3 - ABOUT US CARDS
@@ -6482,7 +7038,7 @@ display: flex;
 }
 
 
-/* Small orange label */
+/* Small #ed1b45 label */
 
 .d3-section-heading > span {
     display: block;
@@ -6494,7 +7050,7 @@ display: flex;
 
     letter-spacing: 2.5px;
 
-    color: #f47b20;
+    color: #ed1b45;
 }
 
 
@@ -6574,7 +7130,7 @@ display: flex;
 }
 
 
-/* Orange top line */
+/* #ed1b45 top line */
 
 .d3-about-card::before {
     content: "";
@@ -6587,7 +7143,7 @@ display: flex;
     width: 100%;
     height: 4px;
 
-    background: #f47b20;
+    background: #ed1b45;
 
     transform: scaleX(0);
 
@@ -6609,7 +7165,7 @@ display: flex;
 }
 
 
-/* Show orange line on hover */
+/* Show #ed1b45 line on hover */
 
 .d3-about-card:hover::before {
     transform: scaleX(1);
@@ -6627,7 +7183,7 @@ display: flex;
 
     letter-spacing: 2px;
 
-    color: #f47b20;
+    color: #ed1b45;
 
     margin-bottom: 24px;
 }
@@ -6706,7 +7262,7 @@ display: flex;
 
     letter-spacing: 2.5px;
 
-    color: #f47b20;
+    color: #ed1b45;
 }
 
 
@@ -6919,22 +7475,7 @@ display: flex;
 
 /* Small top accent */
 
-.d3-about-card::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
 
-    width: 100%;
-    height: 4px;
-
-    background: #f47b20;
-
-    transform: scaleX(0);
-    transform-origin: left;
-
-    transition: transform 0.35s ease;
-}
 
 
 /* Hover */
@@ -6948,9 +7489,7 @@ display: flex;
         0 18px 45px rgba(15, 40, 70, 0.10);
 }
 
-.d3-about-card:hover::before {
-    transform: scaleX(1);
-}
+
 
 
 /* =========================================================
@@ -6962,7 +7501,7 @@ display: flex;
     font-weight: 700;
     letter-spacing: 2px;
 
-    color: #f47b20;
+    color: #ed1b45;
 
     margin-bottom: 28px;
 }
@@ -7009,9 +7548,7 @@ display: flex;
 }
 
 
-.d3-section-heading {
-    max-width: 900px;
-}
+
 
 
 .d3-section-heading > span {
@@ -7024,22 +7561,11 @@ display: flex;
 
     letter-spacing: 2.5px;
 
-    color: #f47b20;
+    color: #ed1b45;
 }
 
 
-.d3-section-heading h2 {
-    margin: 0;
 
-    max-width: 850px;
-
-    font-size: 48px;
-    line-height: 1.15;
-
-    font-weight: 700;
-
-    color: #102d4b;
-}
 
 
 .d3-section-heading p {
@@ -7087,7 +7613,7 @@ display: flex;
 
     letter-spacing: 2.5px;
 
-    color: #f47b20;
+    color: #ed1b45;
 }
 
 
@@ -7124,9 +7650,7 @@ display: flex;
         gap: 20px;
     }
 
-    .d3-about-card {
-        min-height: auto;
-    }
+    
 
     .d3-about-highlight-grid {
         grid-template-columns: 1fr;
@@ -7134,13 +7658,9 @@ display: flex;
         gap: 40px;
     }
 
-    .d3-section-heading h2 {
-        font-size: 40px;
-    }
+    
 
-    .d3-about-highlight-grid h2 {
-        font-size: 40px;
-    }
+    
 }
 
 
@@ -7158,22 +7678,15 @@ display: flex;
         margin-top: 45px;
     }
 
-    .d3-about-card {
-        padding: 30px 26px 32px;
-        border-radius: 14px;
-    }
+    
 
-    .d3-about-card h3 {
-        font-size: 24px;
-    }
+    
 
     .d3-about-card p {
         font-size: 15px;
     }
 
-    .d3-section-heading h2 {
-        font-size: 34px;
-    }
+    
 
     .d3-section-heading p {
         font-size: 16px;
@@ -7183,7 +7696,2872 @@ display: flex;
         padding: 70px 0;
     }
 
-    .d3-about-highlight-grid h2 {
-        font-size: 34px;
+    
+}
+
+/* =====================================================
+   DESIGN 3 - STICKY NAVBAR ON SCROLL UP
+===================================================== */
+
+.d3-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    z-index: 9999 !important;
+
+    transition:
+        transform 0.35s ease,
+        background-color 0.35s ease,
+        box-shadow 0.35s ease;
+
+    background: transparent;
+}
+
+/* Navbar when scrolling UP */
+.d3-header.d3-nav-visible {
+    transform: translateY(0);
+
+    background: #ffffff !important;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
+
+    backdrop-filter: blur(8px);
+}
+
+/* Navbar hidden while scrolling DOWN */
+.d3-header.d3-nav-hidden {
+    transform: translateY(-100%);
+}
+
+
+/* =====================================================
+   TEXT WHEN WHITE NAVBAR IS VISIBLE
+===================================================== */
+
+.d3-header.d3-nav-visible .d3-nav a {
+    color: #222222 !important;
+}
+
+.d3-header.d3-nav-visible .d3-nav a:hover {
+    color: #ed1b45 !important;
+}
+
+
+/* Get Started button remains red */
+.d3-header.d3-nav-visible .d3-start-button {
+    background: #ed1b45 !important;
+    color: #ffffff !important;
+}
+
+
+/* Hamburger becomes blue/dark */
+.d3-header.d3-nav-visible .d3-menu-button span {
+    background: #06304a !important;
+}
+
+
+/* =====================================================
+   ACTIVE LINK
+===================================================== */
+
+.d3-header.d3-nav-visible .d3-nav a.active {
+    color: #ed1b45 !important;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .d3-header {
+        padding: 15px 25px !important;
     }
+
+}
+
+/* =====================================================
+   DESIGN 3 - SCROLL UP NAVBAR
+===================================================== */
+
+.d3-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    z-index: 9999 !important;
+
+    transition:
+        transform 0.35s ease,
+        background-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* HIDE NAVBAR WHEN SCROLLING DOWN */
+
+
+
+
+/* SHOW NAVBAR WHEN SCROLLING UP */
+
+.d3-header.d3-nav-visible {
+    transform: translateY(0);
+
+    background: #ffffff !important;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+/* NAVBAR TEXT WHEN WHITE */
+
+
+
+
+/* ACTIVE LINK */
+
+
+
+
+/* GET STARTED BUTTON */
+
+
+
+
+/* HAMBURGER */
+
+
+
+
+/* =====================================================
+   GET STARTED PAGE STYLES (moved from get-started view)
+   Navbar and form styling live in this shared stylesheet.
+===================================================== */
+/* =========================================================
+
+   GET STARTED PAGE - NAVBAR + TOP SPACING FIX
+
+\========================================================= */
+
+
+
+body.d3-get-started-page {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    color: #1d2939;
+
+    background:
+        linear-gradient(
+            rgba(5, 18, 31, 0.65),
+            rgba(5, 18, 31, 0.65)
+        ),
+        url("../images/design3/about-bg.png")
+        center center / cover fixed no-repeat;
+}
+
+
+
+
+
+
+/* =========================================================
+
+   NAVBAR
+
+\========================================================= */
+
+
+
+/* GET STARTED NAVBAR — USE SHARED DESIGN 3 STYLES */
+
+
+
+body.d3-get-started-page .d3-header {
+
+    position: absolute !important;
+
+    top: 0 !important;
+
+    left: 0 !important;
+
+    right: 0 !important;
+
+    width: 100% !important;
+
+    height: 110px !important;
+
+    padding: 0 3.8% !important;
+
+
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: space-between !important;
+
+
+
+    background: transparent !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+
+    z-index: 99999 !important;
+
+}
+
+
+
+/* Use the shared logo positioning */
+
+body.d3-get-started-page .d3-logo {
+
+    transform: none !important;
+
+    width: 185px !important;
+
+    min-width: 185px !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    flex-shrink: 0 !important;
+
+}
+
+
+
+body.d3-get-started-page .d3-logo img {
+
+    width: 200px !important;
+
+    max-width: 200px !important;
+
+    height: auto !important;
+
+    display: block !important;
+
+}
+
+
+
+/* Match shared navigation spacing */
+
+body.d3-get-started-page .d3-nav {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 42px !important;
+
+    margin-left: auto !important;
+
+    margin-right: 38px !important;
+
+}
+
+
+
+/* Match the shared button */
+
+body.d3-get-started-page .d3-start-button {
+
+    min-width: 178px !important;
+
+    height: 48px !important;
+
+    padding: 0 25px !important;
+
+    font-size: 14px !important;
+
+    font-weight: 800 !important;
+
+}
+
+
+
+/* Keep the hamburger visible */
+
+body.d3-get-started-page .d3-menu-button {
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    gap: 6px !important;
+
+    width: 40px !important;
+
+    height: 40px !important;
+
+    padding: 0 !important;
+
+    margin: 0 !important;
+
+    background: transparent !important;
+
+    border: none !important;
+
+}
+
+
+
+body.d3-get-started-page .d3-menu-button span {
+
+    display: block !important;
+
+    width: 27px !important;
+
+    height: 2px !important;
+
+    margin: 0 !important;
+
+    background: #ffffff !important;
+
+    border-radius: 5px !important;
+
+}
+
+
+
+
+
+/* LOGO */
+
+
+
+/* LOGO */
+
+
+
+body.d3-get-started-page .d3-logo {
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    transform: translateX(0) !important;
+
+    width: 185px !important;
+
+    flex-shrink: 0 !important;
+
+}
+
+
+
+body.d3-get-started-page .d3-logo img {
+
+    width: 185px !important;
+
+    max-width: 185px !important;
+
+    height: auto !important;
+
+    display: block !important;
+
+}
+
+
+
+
+
+/* NAVIGATION */
+
+
+
+body.d3-get-started-page .d3-nav {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+
+
+    gap: 32px !important;
+
+
+
+    margin-left: auto !important;
+
+    margin-right: 38px !important;
+
+}
+
+
+
+body.d3-get-started-page .d3-nav a {
+
+    color: #ffffff !important;
+
+    font-size: 14px !important;
+
+    font-weight: 700 !important;
+
+
+
+    text-decoration: none !important;
+
+    white-space: nowrap !important;
+
+}
+
+
+
+
+
+/* HEADER RIGHT */
+
+
+
+body.d3-get-started-page .d3-header-right {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 30px !important;
+
+}
+
+
+
+
+
+/* GET STARTED BUTTON */
+
+
+
+body.d3-get-started-page .d3-start-button {
+
+    min-width: 180px !important;
+
+    height: 48px !important;
+
+
+
+    padding: 0 25px !important;
+
+
+
+    display: inline-flex !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+
+
+    border-radius: 30px !important;
+
+
+
+    background: #ed1b3b !important;
+
+    color: #ffffff !important;
+
+
+
+    font-size: 14px !important;
+
+    font-weight: 700 !important;
+
+
+
+    text-decoration: none !important;
+
+}
+
+
+
+
+
+/* MENU */
+
+
+
+body.d3-get-started-page .d3-menu-button {
+
+    width: 40px !important;
+
+    height: 40px !important;
+
+
+
+    padding: 5px !important;
+
+
+
+    background: transparent !important;
+
+    border: none !important;
+
+}
+
+
+
+body.d3-get-started-page .d3-menu-button span {
+
+    display: block !important;
+
+
+
+    width: 28px !important;
+
+    height: 2px !important;
+
+
+
+    margin: 6px 0 !important;
+
+
+
+    background: #ffffff !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   MAIN GET STARTED SECTION
+
+\========================================================= */
+
+
+
+body.d3-get-started-page .d3-gs-section {
+
+    position: relative !important;
+
+    z-index: 2 !important;
+
+
+
+    width: 100% !important;
+
+    min-height: 100vh !important;
+
+
+
+    /*
+
+       IMPORTANT:
+
+       This creates enough space below navbar.
+
+    */
+
+    padding: 150px 20px 80px !important;
+
+
+
+    margin: 0 !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   WHITE CARD
+
+\========================================================= */
+
+
+
+body.d3-get-started-page .d3-gs-card {
+
+    width: 100% !important;
+
+
+
+    max-width: 1080px !important;
+
+
+
+    margin: 0 auto !important;
+
+
+
+    background: #ffffff !important;
+
+
+
+    border-radius: 0 !important;
+
+
+
+    overflow: hidden !important;
+
+
+
+    box-shadow:
+
+        0 25px 65px rgba(0, 0, 0, 0.30) !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   TITLE AREA
+
+\========================================================= */
+
+
+
+body.d3-get-started-page .d3-gs-top {
+
+    width: 100% !important;
+
+
+
+    padding: 55px 50px 30px !important;
+
+
+
+    text-align: center !important;
+
+
+
+    background: #ffffff !important;
+
+}
+
+
+
+
+
+body.d3-get-started-page .d3-gs-company {
+
+    margin: 0 0 14px !important;
+
+
+
+    color: #ed1b3b !important;
+
+
+
+    font-size: 18px !important;
+
+    font-weight: 400 !important;
+
+}
+
+
+
+
+
+body.d3-get-started-page .d3-gs-title {
+
+    margin: 0 auto !important;
+
+
+
+    color: #555555 !important;
+
+
+
+    font-size: clamp(42px, 5vw, 60px) !important;
+
+
+
+    font-weight: 700 !important;
+
+
+
+    line-height: 1.08 !important;
+
+
+
+    letter-spacing: -1px !important;
+
+}
+
+
+
+
+
+body.d3-get-started-page .d3-gs-title span {
+
+    color: #ed1b3b !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   FORM
+
+\========================================================= */
+
+
+
+body.d3-get-started-page .d3-gs-form-wrapper {
+
+    padding: 20px 90px 55px !important;
+
+
+
+    background: #ffffff !important;
+
+}
+
+
+
+
+
+/* INPUTS */
+
+
+
+body.d3-get-started-page .d3-gs-input,
+
+body.d3-get-started-page .d3-gs-select {
+
+
+
+    width: 100% !important;
+
+
+
+    height: 52px !important;
+
+
+
+    padding: 12px 0 !important;
+
+
+
+    background: transparent !important;
+
+
+
+    border: 0 !important;
+
+
+
+    border-bottom: 1px solid #999999 !important;
+
+
+
+    border-radius: 0 !important;
+
+
+
+    color: #555555 !important;
+
+
+
+    font-size: 16px !important;
+
+
+
+    outline: none !important;
+
+
+
+    box-shadow: none !important;
+
+}
+
+
+
+
+
+body.d3-get-started-page .d3-gs-input:focus,
+
+body.d3-get-started-page .d3-gs-select:focus {
+
+
+
+    border-bottom: 2px solid #ed1b3b !important;
+
+}
+
+
+
+
+
+/* TEXTAREA */
+
+
+
+body.d3-get-started-page .d3-gs-textarea {
+
+
+
+    width: 100% !important;
+
+
+
+    min-height: 125px !important;
+
+
+
+    padding: 14px 0 !important;
+
+
+
+    background: transparent !important;
+
+
+
+    border: 0 !important;
+
+
+
+    border-bottom: 1px solid #999999 !important;
+
+
+
+    border-radius: 0 !important;
+
+
+
+    color: #555555 !important;
+
+
+
+    font-size: 16px !important;
+
+
+
+    outline: none !important;
+
+
+
+    box-shadow: none !important;
+
+
+
+    resize: vertical !important;
+
+}
+
+
+
+
+
+body.d3-get-started-page .d3-gs-textarea:focus {
+
+
+
+    border-bottom: 2px solid #ed1b3b !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   PHONE PREFERENCE
+
+\========================================================= */
+
+
+
+body.d3-get-started-page .d3-gs-phone {
+
+
+
+    margin: 30px 0 20px !important;
+
+
+
+    text-align: center !important;
+
+}
+
+
+
+
+
+body.d3-get-started-page .d3-gs-phone label {
+
+
+
+    display: inline-flex !important;
+
+
+
+    align-items: center !important;
+
+
+
+    gap: 10px !important;
+
+
+
+    color: #ed1b3b !important;
+
+
+
+    font-size: 16px !important;
+
+}
+
+/* =========================================================
+
+   CUSTOM CAPTCHA
+
+\========================================================= */
+
+
+
+.d3-gs-captcha {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    margin: 30px auto 35px;
+
+}
+
+
+
+.d3-custom-captcha {
+
+    width: 330px;
+
+    height: 82px;
+
+
+
+    padding: 12px 14px;
+
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+
+
+    background: #fafafa;
+
+
+
+    border: 1px solid #d6d6d6;
+
+
+
+    border-radius: 5px;
+
+
+
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+
+
+
+    cursor: pointer;
+
+
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+
+
+
+/* Hide real checkbox */
+
+.d3-custom-captcha input {
+
+    position: absolute;
+
+
+
+    opacity: 0;
+
+
+
+    width: 1px;
+
+    height: 1px;
+
+}
+
+
+
+
+
+/* LEFT SIDE */
+
+
+
+.d3-captcha-left {
+
+    display: flex;
+
+
+
+    align-items: center;
+
+
+
+    gap: 12px;
+
+}
+
+
+
+
+
+/* CHECKBOX */
+
+
+
+.d3-captcha-checkbox {
+
+    width: 28px;
+
+    height: 28px;
+
+
+
+    display: flex;
+
+
+
+    align-items: center;
+
+    justify-content: center;
+
+
+
+    background: #ffffff;
+
+
+
+    border: 2px solid #777;
+
+
+
+    border-radius: 2px;
+
+
+
+    flex-shrink: 0;
+
+
+
+    transition: 0.2s ease;
+
+}
+
+
+
+
+
+/* CHECKED STATE */
+
+
+
+.d3-custom-captcha input:checked
+
+\~ .d3-captcha-left .d3-captcha-checkbox {
+
+    background: #ffffff;
+
+
+
+    border-color: #1da463;
+
+}
+
+
+
+
+
+/* GREEN TICK */
+
+
+
+.d3-custom-captcha input:checked
+
+\~ .d3-captcha-left .d3-captcha-checkbox::after {
+
+
+
+    content: "✓";
+
+
+
+    color: #1da463;
+
+
+
+    font-size: 23px;
+
+
+
+    font-weight: bold;
+
+
+
+    line-height: 1;
+
+}
+
+
+
+
+
+/* TEXT */
+
+
+
+.d3-captcha-text {
+
+    color: #222;
+
+
+
+    font-size: 15px;
+
+
+
+    white-space: nowrap;
+
+}
+
+
+
+
+
+/* RIGHT SIDE */
+
+
+
+.d3-captcha-right {
+
+
+
+    width: 65px;
+
+
+
+    height: 58px;
+
+
+
+    display: flex;
+
+
+
+    flex-direction: column;
+
+
+
+    align-items: center;
+
+
+
+    justify-content: center;
+
+}
+
+
+
+
+
+/* RECAPTCHA ICON */
+
+
+
+.d3-captcha-refresh {
+
+
+
+    color: #4285f4;
+
+
+
+    font-size: 31px;
+
+
+
+    line-height: 1;
+
+}
+
+
+
+
+
+/* RECAPTCHA TEXT */
+
+
+
+.d3-captcha-name {
+
+
+
+    margin-top: 3px;
+
+
+
+    color: #555;
+
+
+
+    font-size: 9px;
+
+}
+
+
+
+
+
+/* MOBILE */
+
+
+
+@media (max-width: 576px) {
+
+
+
+    .d3-custom-captcha {
+
+
+
+        width: 100%;
+
+
+
+        max-width: 330px;
+
+    }
+
+
+
+    .d3-captcha-text {
+
+
+
+        font-size: 14px;
+
+    }
+
+}
+
+
+
+/* =========================================================
+
+   SUBMIT
+
+\========================================================= */
+
+
+
+body.d3-get-started-page .d3-gs-submit {
+
+
+
+    width: 100% !important;
+
+
+
+    max-width: 700px !important;
+
+
+
+    min-height: 58px !important;
+
+
+
+    margin: 10px auto 0 !important;
+
+
+
+    display: flex !important;
+
+
+
+    align-items: center !important;
+
+
+
+    justify-content: center !important;
+
+
+
+    gap: 15px !important;
+
+
+
+    padding: 15px 40px !important;
+
+
+
+    background: #ed1b3b !important;
+
+
+
+    color: #ffffff !important;
+
+
+
+    border: none !important;
+
+
+
+    border-radius: 50px !important;
+
+
+
+    font-size: 17px !important;
+
+
+
+    font-weight: 700 !important;
+
+}
+
+
+
+
+
+/* =========================================================
+
+   TABLET
+
+\========================================================= */
+
+
+
+@media (max-width: 1200px) {
+
+
+
+    body.d3-get-started-page .d3-nav {
+
+        gap: 24px !important;
+
+        margin-right: 25px !important;
+
+    }
+
+
+
+    body.d3-get-started-page .d3-nav a {
+
+        font-size: 13px !important;
+
+    }
+
+
+
+    body.d3-get-started-page .d3-gs-form-wrapper {
+
+        padding-left: 65px !important;
+
+        padding-right: 65px !important;
+
+    }
+
+}
+
+
+
+
+
+/* =========================================================
+
+   MOBILE
+
+\========================================================= */
+
+
+
+@media (max-width: 991px) {
+
+
+
+    body.d3-get-started-page .d3-nav {
+
+        display: none !important;
+
+    }
+
+
+
+    body.d3-get-started-page .d3-header {
+
+        height: 80px !important;
+
+        min-height: 80px !important;
+
+        padding: 0 25px !important;
+
+    }
+
+
+
+    body.d3-get-started-page .d3-gs-section {
+
+        padding: 110px 15px 60px !important;
+
+    }
+
+
+
+    body.d3-get-started-page .d3-gs-form-wrapper {
+
+        padding: 25px 40px 45px !important;
+
+    }
+
+}
+
+
+
+
+
+.d3-gs-submit:disabled {
+
+    opacity: 0.55;
+
+    cursor: not-allowed;
+
+    transform: none !important;
+
+    box-shadow: none !important;
+
+}
+
+
+
+.d3-gs-submit:disabled:hover {
+
+    background: #ed1b3b;
+
+    transform: none !important;
+
+    box-shadow: none !important;
+
+}
+
+
+
+@media (max-width: 576px) {
+
+
+
+    body.d3-get-started-page .d3-header {
+
+        height: 75px !important;
+
+        min-height: 75px !important;
+
+        padding: 0 18px !important;
+
+    }
+
+
+
+    body.d3-get-started-page .d3-logo img {
+
+        width: 155px !important;
+
+    }
+
+
+
+    body.d3-get-started-page .d3-start-button {
+
+        display: none !important;
+
+    }
+
+
+
+    body.d3-get-started-page .d3-gs-section {
+
+        padding: 95px 10px 45px !important;
+
+    }
+
+
+
+    body.d3-get-started-page .d3-gs-top {
+
+        padding: 38px 20px 25px !important;
+
+    }
+
+
+
+    body.d3-get-started-page .d3-gs-title {
+
+        font-size: 36px !important;
+
+    }
+
+
+
+    body.d3-get-started-page .d3-gs-form-wrapper {
+
+        padding: 20px 22px 35px !important;
+
+    }
+
+
+
+}
+
+
+
+
+
+/* =========================================================
+
+   BEAUTIFUL SUCCESS MESSAGE
+
+\========================================================= */
+
+
+
+.d3-gs-success-message {
+
+    width: calc(100% - 120px);
+
+
+
+    margin: 30px auto 10px;
+
+
+
+    padding: 18px 22px;
+
+
+
+    display: flex;
+
+
+
+    align-items: center;
+
+
+
+    gap: 16px;
+
+
+
+    background: #f0fdf4;
+
+
+
+    border: 1px solid #bbf7d0;
+
+
+
+    border-radius: 10px;
+
+
+
+    box-sizing: border-box;
+
+
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+}
+
+
+
+
+
+/* GREEN CHECK */
+
+
+
+.d3-success-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+
+
+    flex-shrink: 0;
+
+
+
+    display: flex;
+
+
+
+    align-items: center;
+
+    justify-content: center;
+
+
+
+    background: #22c55e;
+
+
+
+    color: #ffffff;
+
+
+
+    border-radius: 50%;
+
+
+
+    font-size: 22px;
+
+
+
+    font-weight: 700;
+
+}
+
+
+
+
+
+/* TEXT */
+
+
+
+.d3-success-content strong {
+
+    display: block;
+
+
+
+    margin-bottom: 3px;
+
+
+
+    color: #166534;
+
+
+
+    font-size: 17px;
+
+
+
+    font-weight: 700;
+
+}
+
+
+
+
+
+.d3-success-content p {
+
+    margin: 0;
+
+
+
+    color: #34704a;
+
+
+
+    font-size: 14px;
+
+}
+
+
+
+
+
+/* MOBILE */
+
+
+
+@media (max-width: 576px) {
+
+
+
+    .d3-gs-success-message {
+
+
+
+        width: calc(100% - 40px);
+
+
+
+        margin-top: 20px;
+
+
+
+        padding: 15px;
+
+    }
+
+
+
+    .d3-success-icon {
+
+
+
+        width: 35px;
+
+        height: 35px;
+
+
+
+        font-size: 19px;
+
+    }
+
+
+
+    .d3-success-content strong {
+
+        font-size: 15px;
+
+    }
+
+
+
+    .d3-success-content p {
+
+        font-size: 13px;
+
+    }
+
+
+
+}
+
+
+
+/* =========================================
+
+   GET STARTED - FORCE HAMBURGER VISIBILITY
+
+\========================================= */
+
+
+
+body.d3-get-started-page .d3-header-right {
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    justify-content: flex-end !important;
+
+    flex-shrink: 0 !important;
+
+    gap: 30px !important;
+
+    position: relative !important;
+
+    z-index: 1002 !important;
+
+}
+
+
+
+body.d3-get-started-page button.d3-menu-button {
+
+    display: flex !important;
+
+    visibility: visible !important;
+
+    opacity: 1 !important;
+
+
+
+    flex: 0 0 42px !important;
+
+    width: 42px !important;
+
+    min-width: 42px !important;
+
+    height: 42px !important;
+
+
+
+    flex-direction: column !important;
+
+    align-items: center !important;
+
+    justify-content: center !important;
+
+    gap: 6px !important;
+
+
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+
+
+    background: transparent !important;
+
+    border: none !important;
+
+
+
+    position: relative !important;
+
+    z-index: 1003 !important;
+
+    cursor: pointer !important;
+
+}
+
+
+
+body.d3-get-started-page button.d3-menu-button span {
+
+    display: block !important;
+
+    visibility: visible !important;
+
+    opacity: 1 !important;
+
+
+
+    width: 30px !important;
+
+    height: 2px !important;
+
+    min-height: 2px !important;
+
+
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+
+
+    background: #ffffff !important;
+
+    border: none !important;
+
+    border-radius: 2px !important;
+
+}
+
+/* FINAL FIX: Get Started page header and hero spacing */
+body.d3-get-started-page {
+    margin: 0;
+    min-height: 100vh;
+    color: #151515 !important;
+    overflow-x: hidden !important;
+    background:
+        linear-gradient(
+rgba(8, 20, 32, 0.64)
+rgba(8, 20, 32, 0.64)        ),
+        url("../images/design3/about-bg.png") center center / cover fixed no-repeat !important;
+}
+body.d3-get-started-page header.d3-header {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    min-height: 110px !important;
+    height: 110px !important;
+    padding: 0 4% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    background: #081225 !important;
+    z-index: 20 !important;
+}
+body.d3-get-started-page header.d3-header a.d3-logo {
+    transform: none !important;
+    position: static !important;
+    width: 185px !important;
+    min-width: 185px !important;
+    margin: 0 24px 0 0 !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+}
+body.d3-get-started-page header.d3-header a.d3-logo img {
+    display: block !important;
+    width: 175px !important;
+    max-width: 175px !important;
+    height: auto !important;
+}
+body.d3-get-started-page header.d3-header .d3-nav {
+    position: static !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: clamp(14px, 2vw, 32px) !important;
+    margin: 0 24px 0 auto !important;
+    padding: 0 !important;
+    flex: 0 1 auto !important;
+}
+body.d3-get-started-page header.d3-header .d3-nav a {
+    color: #fff !important;
+    white-space: nowrap !important;
+}
+body.d3-get-started-page header.d3-header .d3-header-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 24px !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+}
+body.d3-get-started-page .d3-gs-section {
+    position: relative !important;
+    display: block !important;
+    width: 100% !important;
+    min-height: calc(100vh - 110px) !important;
+    padding: 44px 4% 64px !important;
+    margin: 0 !important;
+    background: transparent !important;
+}
+body.d3-get-started-page .d3-gs-card {
+    width: 100% !important;
+    max-width: 1180px !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+body.d3-get-started-page .d3-gs-top {
+    position: static !important;
+    display: block !important;
+    margin: 0 0 28px !important;
+    padding: 0 !important;
+}
+body.d3-get-started-page .d3-gs-company {
+    display: block !important;
+    margin: 0 0 10px !important;
+    color: #ed1b3b !important;
+    font-size: 15px !important;
+    line-height: 1.4 !important;
+}
+body.d3-get-started-page h1.d3-gs-title {
+    position: static !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #555 !important;
+    font-size: clamp(36px, 4vw, 62px) !important;
+    line-height: 1.08 !important;
+    font-weight: 800 !important;
+}
+body.d3-get-started-page h1.d3-gs-title span { color: #ed1b3b !important; }
+@media (max-width: 1100px) {
+    body.d3-get-started-page header.d3-header { padding: 0 20px !important; }
+    body.d3-get-started-page header.d3-header .d3-nav { gap: 12px !important; margin-right: 12px !important; }
+    body.d3-get-started-page header.d3-header .d3-nav a { font-size: 12px !important; }
+}
+@media (max-width: 800px) {
+    body.d3-get-started-page header.d3-header { min-height: 82px !important; height: 82px !important; }
+    body.d3-get-started-page header.d3-header .d3-nav { display: none !important; }
+    body.d3-get-started-page .d3-gs-section { padding: 32px 18px 48px !important; }
+}
+
+
+/* =====================================================
+   GET STARTED — MATCH THE SHARED DESIGN 3 NAVBAR
+   Uses the same dimensions and layout as the working
+   Home / About / Services / Solutions / Careers / Contact pages.
+===================================================== */
+body.d3-get-started-page header.d3-header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 110px !important;
+    min-height: 110px !important;
+    padding: 0 3.8% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    z-index: 99999 !important;
+    overflow: visible !important;
+}
+
+body.d3-get-started-page header.d3-header a.d3-logo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 185px !important;
+    min-width: 185px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-shrink: 0 !important;
+    transform: translateX(150px) !important;
+    background: transparent !important;
+}
+
+body.d3-get-started-page header.d3-header a.d3-logo img {
+    display: block !important;
+    width: 200px !important;
+    max-width: none !important;
+    height: auto !important;
+    object-fit: contain !important;
+}
+
+body.d3-get-started-page header.d3-header .d3-nav {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 42px !important;
+    margin-left: auto !important;
+    margin-right: 38px !important;
+    padding: 0 !important;
+    flex: 0 1 auto !important;
+    z-index: 99999 !important;
+}
+
+body.d3-get-started-page header.d3-header .d3-nav a {
+    color: #fff !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+}
+
+body.d3-get-started-page header.d3-header .d3-header-right {
+    display: flex !important;
+    align-items: center !important;
+    gap: 38px !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+}
+
+body.d3-get-started-page header.d3-header .d3-start-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 178px !important;
+    height: 48px !important;
+    padding: 0 25px !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
+}
+
+body.d3-get-started-page header.d3-header .d3-menu-button {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+body.d3-get-started-page header.d3-header .d3-menu-button span {
+    display: block !important;
+    width: 27px !important;
+    height: 2px !important;
+    background: #fff !important;
+    border-radius: 5px !important;
+}
+
+/* Keep the heading/form below the fixed navbar. */
+body.d3-get-started-page .d3-gs-section {
+    padding-top: 140px !important;
+}
+
+@media (max-width: 1200px) {
+    body.d3-get-started-page header.d3-header .d3-nav {
+        gap: 24px !important;
+        margin-right: 25px !important;
+    }
+    body.d3-get-started-page header.d3-header .d3-nav a {
+        font-size: 13px !important;
+    }
+    body.d3-get-started-page header.d3-header .d3-header-right {
+        gap: 20px !important;
+    }
+}
+
+@media (max-width: 950px) {
+    body.d3-get-started-page header.d3-header {
+        height: 85px !important;
+        min-height: 85px !important;
+        padding: 0 25px !important;
+    }
+    body.d3-get-started-page header.d3-header .d3-nav {
+        display: none !important;
+    }
+    body.d3-get-started-page header.d3-header .d3-start-button {
+        display: none !important;
+    }
+    body.d3-get-started-page header.d3-header .d3-header-right {
+        margin-left: auto !important;
+    }
+    body.d3-get-started-page .d3-gs-section {
+        padding-top: 110px !important;
+    }
+}
+
+@media (max-width: 700px) {
+    body.d3-get-started-page header.d3-header {
+        height: 75px !important;
+        min-height: 75px !important;
+        padding: 0 18px !important;
+    }
+    body.d3-get-started-page header.d3-header a.d3-logo {
+        transform: none !important;
+    }
+    body.d3-get-started-page header.d3-header a.d3-logo img {
+        width: 145px !important;
+    }
+}
+
+
+/* GET STARTED: remove white panels behind title/form; keep fields themselves styled separately */
+body.d3-get-started-page .d3-gs-card,
+body.d3-get-started-page .d3-gs-top,
+body.d3-get-started-page .d3-gs-form-wrapper {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+
+/* GET STARTED FORM VISIBILITY FIX
+   Keep the building background visible while giving the form a clear surface. */
+body.d3-get-started-page .d3-gs-card {
+    max-width: 1180px !important;
+    background: transparent !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+}
+
+body.d3-get-started-page .d3-gs-top {
+    background: transparent !important;
+    padding: 28px 20px 34px !important;
+}
+
+body.d3-get-started-page .d3-gs-form-wrapper {
+    display: block !important;
+    width: 100% !important;
+    padding: 30px 40px 38px !important;
+    background: rgba(255, 255, 255, 0.94) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 16px 42px rgba(0, 0, 0, 0.22) !important;
+    color: #263342 !important;
+}
+
+body.d3-get-started-page .d3-gs-input,
+body.d3-get-started-page .d3-gs-select,
+body.d3-get-started-page .d3-gs-form-wrapper input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]),
+body.d3-get-started-page .d3-gs-form-wrapper select,
+body.d3-get-started-page .d3-gs-form-wrapper textarea {
+    box-sizing: border-box !important;
+    width: 100% !important;
+    min-height: 46px !important;
+    padding: 11px 14px !important;
+    background: #ffffff !important;
+    border: 1px solid #d5dce3 !important;
+    border-radius: 6px !important;
+    color: #263342 !important;
+    font-size: 16px !important;
+    box-shadow: none !important;
+}
+
+body.d3-get-started-page .d3-gs-form-wrapper textarea,
+body.d3-get-started-page .d3-gs-form-wrapper textarea.d3-gs-input {
+    min-height: 110px !important;
+    resize: vertical !important;
+}
+
+body.d3-get-started-page .d3-gs-form-wrapper input::placeholder,
+body.d3-get-started-page .d3-gs-form-wrapper textarea::placeholder {
+    color: #667085 !important;
+    opacity: 1 !important;
+}
+
+body.d3-get-started-page .d3-gs-form-wrapper label,
+body.d3-get-started-page .d3-gs-form-wrapper p {
+    color: #263342;
+}
+
+@media (max-width: 700px) {
+    body.d3-get-started-page .d3-gs-top {
+        padding: 22px 8px 26px !important;
+    }
+    body.d3-get-started-page .d3-gs-form-wrapper {
+        padding: 22px 16px 28px !important;
+    }
+}
+
+
+/* FINAL GET STARTED NAVBAR/SCROLL ALIGNMENT FIX */
+body.d3-get-started-page header.d3-header {
+    position: fixed !important;
+    top: 0 !important;
+    z-index: 99999 !important;
+    transition: transform .35s ease, background-color .35s ease, box-shadow .35s ease !important;
+}
+
+/* Match the About page when the shared JS shows the navbar on scroll-up */
+body.d3-get-started-page header.d3-header.d3-nav-visible {
+    transform: translateY(0) !important;
+    background: #fff !important;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, .12) !important;
+    backdrop-filter: blur(8px) !important;
+}
+
+body.d3-get-started-page header.d3-header.d3-nav-visible .d3-nav a {
+    color: #222 !important;
+}
+
+body.d3-get-started-page header.d3-header.d3-nav-visible .d3-nav a:hover,
+body.d3-get-started-page header.d3-header.d3-nav-visible .d3-nav a.active {
+    color: #ed1b45 !important;
+}
+
+body.d3-get-started-page header.d3-header.d3-nav-visible .d3-menu-button span {
+    background: #06304a !important;
+}
+
+body.d3-get-started-page header.d3-header.d3-nav-hidden {
+    transform: translateY(-100%) !important;
+}
+
+/* Keep the title fully below the fixed navbar and prevent it being clipped */
+body.d3-get-started-page .d3-gs-section {
+    padding-top: 132px !important;
+    min-height: 100vh !important;
+    overflow: visible !important;
+}
+
+body.d3-get-started-page .d3-gs-card,
+body.d3-get-started-page .d3-gs-top,
+body.d3-get-started-page .d3-gs-title {
+    position: relative !important;
+    top: auto !important;
+    transform: none !important;
+    overflow: visible !important;
+}
+
+body.d3-get-started-page .d3-gs-title {
+    line-height: 1.12 !important;
+    margin-bottom: 0 !important;
+}
+
+@media (max-width: 800px) {
+    body.d3-get-started-page .d3-gs-section {
+        padding-top: 100px !important;
+    }
+}
+
+
+/* Custom CAPTCHA checkbox */
+.d3-custom-captcha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 360px;
+    max-width: 100%;
+    min-height: 80px;
+    padding: 18px;
+    box-sizing: border-box;
+    background: #fafafa;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    color: #222;
+    font-family: Arial, sans-serif;
+}
+
+
+
+.d3-custom-captcha input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.d3-captcha-checkbox {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    border: 2px solid #888;
+    background: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.d3-custom-captcha input[type="checkbox"]:checked + .d3-captcha-left .d3-captcha-checkbox {
+    background: #1683ff;
+    border-color: #1683ff;
+}
+
+.d3-custom-captcha input[type="checkbox"]:checked + .d3-captcha-left .d3-captcha-checkbox::after {
+    content: "✓";
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.d3-custom-captcha input[type="checkbox"]:focus-visible + .d3-captcha-left .d3-captcha-checkbox {
+    outline: 2px solid #1683ff;
+    outline-offset: 3px;
+}
+
+.d3-captcha-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.d3-captcha-refresh {
+    color: #4285f4;
+    font-size: 27px;
+    line-height: 1;
+}
+
+.d3-captcha-name {
+    color: #555;
+    font-size: 11px;
+}
+
+/* ================= CENTER SCROLL + OUR SERVICES BUTTON ================= */
+.d3-scroll {
+    left: 50% !important;
+    right: auto !important;
+    bottom: 92px !important;
+    transform: translateX(-50%) !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+.d3-home-content .d3-home-button {
+    display: flex !important;
+    width: max-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+@media (max-width: 700px) {
+    .d3-scroll {
+        left: 50% !important;
+        bottom: 92px !important;
+        transform: translateX(-50%) !important;
+        flex-direction: row !important;
+        text-align: center !important;
+    }
+
+    .d3-home-content .d3-home-button {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+
+/* =====================================================
+   DESIGN 3 - HAMBURGER SLIDE-OUT MENU
+   Single clean version — panel sits above the header
+===================================================== */
+
+.d3-menu-overlay {
+    position: fixed !important;
+    inset: 0 !important;
+    background: rgba(8, 18, 37, 0.55) !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 2147483000 !important;
+}
+
+.d3-mobile-menu {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    gap: 0 !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: auto !important;
+    width: 390px !important;
+    max-width: 88vw !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    margin: 0 !important;
+    padding: 30px !important;
+    box-sizing: border-box !important;
+    background: #ffffff !important;
+    box-shadow: -12px 0 40px rgba(8, 18, 37, 0.16) !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    transform: translateX(105%);
+    visibility: hidden;
+    transition: transform 0.35s ease, visibility 0.35s ease;
+    z-index: 2147483001 !important;
+}
+
+.d3-mobile-menu.is-open {
+    transform: translateX(0) !important;
+    visibility: visible !important;
+}
+
+.d3-mobile-menu-header {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 15px !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    margin: 0 0 15px !important;
+    padding: 0 0 24px !important;
+    box-sizing: border-box !important;
+    border-bottom: 1px solid #e8edf3 !important;
+    color: #081225 !important;
+    font-size: 21px !important;
+    font-weight: 700 !important;
+}
+
+.d3-menu-close {
+    display: inline-flex !important;
+    flex: 0 0 42px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 42px !important;
+    min-width: 42px !important;
+    height: 42px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 50% !important;
+    background: #f1f4f8 !important;
+    color: #ed1b45 !important;
+    font-size: 32px !important;
+    line-height: 1 !important;
+    cursor: pointer;
+    box-shadow: none !important;
+}
+
+.d3-menu-close:hover {
+    background: #ed1b45 !important;
+    color: #ffffff !important;
+}
+
+.d3-mobile-menu > a {
+    display: flex !important;
+    position: static !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 15px !important;
+    flex: 0 0 auto !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 17px 2px !important;
+    float: none !important;
+    box-sizing: border-box !important;
+    border: 0 !important;
+    border-bottom: 1px solid #edf0f4 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #10213c !important;
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    text-decoration: none !important;
+    white-space: normal !important;
+    transform: none;
+}
+
+.d3-mobile-menu > a span {
+    display: inline-block !important;
+    flex: 0 0 auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    color: #ed1b45 !important;
+    font-size: 19px !important;
+}
+
+.d3-mobile-menu > a:hover {
+    padding-left: 8px !important;
+    color: #ed1b45 !important;
+}
+
+.d3-mobile-menu > a.d3-mobile-menu-cta {
+    display: flex !important;
+    justify-content: space-between !important;
+    margin: 25px 0 0 !important;
+    padding: 16px 20px !important;
+    border: 0 !important;
+    border-radius: 8px !important;
+    background: #ed1b45 !important;
+    color: #ffffff !important;
+}
+
+.d3-mobile-menu > a.d3-mobile-menu-cta span {
+    color: #ffffff !important;
+}
+
+.d3-menu-overlay.is-open {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+body.d3-menu-open {
+    overflow: hidden !important;
+}
+
+@media (max-width: 900px) {
+    .d3-mobile-menu {
+        padding: 24px !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .d3-mobile-menu,
+    .d3-menu-overlay {
+        transition: none !important;
+    }
+}
+
+
+
+/* =========================================
+   DESIGN 3 - SOFTWARE IMAGE: REMOVE INNER GAP
+   Keep this block at the very end of design3.css
+========================================= */
+
+.d3-hero .d3-slide .d3-home-image.d3-software-image {
+    position: relative !important;
+    width: 100% !important;
+    height: 460px !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    overflow: hidden !important;
+    border-radius: 35px !important;
+    box-sizing: border-box !important;
+    background: transparent !important;
+}
+
+.d3-hero .d3-slide .d3-home-image.d3-software-image img {
+    position: absolute !important;
+    inset: -2px !important;
+    width: calc(100% + 4px) !important;
+    height: calc(100% + 4px) !important;
+    display: block !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    transform: none !important;
+}
+
+/* Preserve the existing slide spacing */
+.d3-slide:has(.d3-software-image) {
+    padding-top: 120px !important;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .d3-hero .d3-slide .d3-home-image.d3-software-image {
+        height: 360px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .d3-hero .d3-slide .d3-home-image.d3-software-image {
+        height: 290px !important;
+        border-radius: 20px !important;
+    }
+}
+
+
+
+/* DESIGN 3 - FIX IMAGE SLIDER ANIMATION */
+
+.d3-home-image.d3-image-slider {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.d3-home-image.d3-image-slider img.d3-image-slide {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    opacity: 0 !important;
+    visibility: hidden !important;
+    z-index: 1 !important;
+
+    transition: opacity 1.2s ease-in-out !important;
+}
+
+.d3-home-image.d3-image-slider img.d3-image-slide.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 2 !important;
+}
+
+
+
+
+/* =====================================================
+   DESIGN 3 HOME HERO - CONSOLIDATED BUTTON + SCROLL LAYOUT
+   Order from top to bottom:
+   SCROLL TO EXPLORE
+   OUR SERVICES button
+   AMERIPRO SOLUTIONS section
+===================================================== */
+
+/* Keep hero controls positioned inside the hero, not over the text/image. */
+.d3-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+/* The content wrapper must not become the button's positioning parent.
+   The slide becomes the containing block for the absolute button. */
+.d3-hero .d3-slide .d3-home-content {
+    position: static !important;
+}
+
+/* Place OUR SERVICES at the bottom of the hero, centered horizontally. */
+.d3-hero .d3-slide .d3-home-content .d3-home-button {
+    position: absolute !important;
+    left: 50% !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: 12px !important;
+    display: inline-flex !important;
+    width: max-content !important;
+    margin: 0 !important;
+    transform: translateX(-50%) !important;
+    z-index: 25 !important;
+}
+
+/* Place SCROLL TO EXPLORE above the button. */
+.d3-hero > .d3-scroll,
+.d3-hero .d3-scroll {
+    position: absolute !important;
+    left: 50% !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: 78px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    width: max-content !important;
+    max-width: calc(100% - 30px) !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: translateX(-50%) !important;
+    color: #102944 !important;
+    white-space: nowrap !important;
+    z-index: 26 !important;
+}
+
+/* Keep the intro heading below the hero without extra compensating offsets. */
+.d3-intro-section {
+    position: relative;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+    .d3-hero .d3-slide .d3-home-content .d3-home-button {
+        bottom: 12px !important;
+    }
+
+    .d3-hero > .d3-scroll,
+    .d3-hero .d3-scroll {
+        bottom: 78px !important;
+        font-size: 12px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .d3-hero {
+        min-height: 680px;
+    }
+
+    .d3-hero .d3-slide .d3-home-content .d3-home-button {
+        bottom: 12px !important;
+        left: 50% !important;
+        margin: 0 !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .d3-hero > .d3-scroll,
+    .d3-hero .d3-scroll {
+        bottom: 78px !important;
+        left: 50% !important;
+        font-size: 11px !important;
+        gap: 8px !important;
+        transform: translateX(-50%) !important;
+    }
+}
+
+
+/* Preserve the button's centered position while its entrance animation runs. */
+.d3-slide.active .d3-home-content .d3-home-button {
+    animation: d3CenteredButtonIn 0.8s ease 0.7s forwards !important;
+}
+
+@keyframes d3CenteredButtonIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 14px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* FIX: Reduce space between testimonials and Our Clients */
+
+.d3-testimonials-section {
+    padding-top: 60px !important;
+    padding-bottom: 25px !important;
+    margin-bottom: 0 !important;
+}
+
+.d3-testimonial-dots {
+    margin-top: 25px !important;
+    margin-bottom: 0 !important;
+}
+
+.d3-clients-section {
+    padding-top: 45px !important;
+    margin-top: 0 !important;
+}
+
+/* Keep the client heading and grid layout intact */
+.d3-clients-header {
+    margin-top: 0 !important;
+}
+
+/* =========================================
+   DESIGN 3 - CLIENT LOGOS
+========================================= */
+
+.d3-clients-grid .d3-client-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 210px;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.d3-clients-grid .d3-client-card img {
+    display: block;
+    width: 100%;
+    max-width: 230px;
+    height: 100px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto;
+    transition: transform 0.35s ease;
+}
+
+.d3-clients-grid .d3-client-card:hover img {
+    transform: scale(1.06);
+}
+
+@media (max-width: 768px) {
+    .d3-clients-grid .d3-client-card {
+        min-height: 160px;
+        padding: 20px;
+    }
+
+    .d3-clients-grid .d3-client-card img {
+        max-width: 190px;
+        height: 85px;
+    }
+}
+
+/* MAIN NAVBAR - CHEVRON ICONS ONLY
+   CSS-drawn chevrons; leaves the existing UI styles unchanged.
+*/
+.d3-nav .d3-dropdown .d3-nav-chevron {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    margin: -3px 0 0 6px;
+    padding: 0;
+    border: 0;
+    border-right: 1.7px solid currentColor;
+    border-bottom: 1.7px solid currentColor;
+    background: transparent;
+    font-size: 0;
+    line-height: 1;
+    transform: rotate(45deg);
+    vertical-align: middle;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+
+.d3-nav .d3-nav-dropdown:hover > .d3-dropdown .d3-nav-chevron,
+.d3-nav .d3-nav-dropdown.d3-dropdown-open > .d3-dropdown .d3-nav-chevron {
+    transform: rotate(225deg);
 }

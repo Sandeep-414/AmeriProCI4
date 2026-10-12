@@ -24,7 +24,6 @@ $routes->get('design2/solutions', 'Design2::solutions');
 
 $routes->get('design2/about', 'Design2::about');
 
-$routes->get('design2/login', 'Design2::login');
 
 $routes->get('design2/timesheet', 'Design2::timesheet');
 
@@ -75,8 +74,17 @@ $routes->get('design3/careers', 'Design3::careers');
 $routes->get('design3/contact', 'Design3::contact');
 $routes->post('design3/contact/submit', 'Design3::contactSubmit');
 
-$routes->match(
-    ['GET', 'POST'],
-    'design3/login',
-    'Design3::login'
+
+// =========================================
+// DESIGN 3 - GET STARTED
+// =========================================
+
+$routes->get(
+    'design3/get-started',
+    'Design3::getStarted'
+);
+
+$routes->post(
+    'design3/get-started-submit',
+    'Design3::getStartedSubmit'
 );

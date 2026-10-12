@@ -37,7 +37,7 @@
     >
 
         <img
-            src="<?= base_url('assets/images/design3/ameripro-logo-footer.png') ?>"
+            src="<?= base_url('assets/images/design3/ameripro-logo.png') ?>"
             alt="AmeriPro Solutions"
         >
 

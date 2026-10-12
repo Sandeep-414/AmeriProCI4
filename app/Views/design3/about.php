@@ -14,7 +14,7 @@
 
     <link
         rel="stylesheet"
-        href="<?= base_url('assets/css/design3.css') ?>"
+        href="<?= base_url('assets/css/design3.css') ?>?v=<?= time() ?>"
     >
 
 </head>
@@ -34,7 +34,7 @@
     >
 
         <img
-            src="<?= base_url('assets/images/design3/ameripro-logo-footer.png') ?>"
+            src="<?= base_url('assets/images/design3/ameripro-logo.png') ?>"
             alt="AmeriPro Solutions"
         >
 
@@ -95,7 +95,9 @@
             class="d3-menu-button"
             id="d3MenuButton"
             type="button"
-            aria-label="Menu"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="d3MobileMenu"
         >
 
             <span></span>
@@ -108,6 +110,45 @@
 
 </header>
 
+
+<!-- =====================================================
+     DESIGN 3 HAMBURGER MENU
+===================================================== -->
+
+<div class="d3-menu-overlay" id="d3MenuOverlay"></div>
+
+<nav
+    class="d3-mobile-menu"
+    id="d3MobileMenu"
+    aria-label="Main navigation"
+>
+
+    <div class="d3-mobile-menu-header">
+
+        <span>Explore AmeriPro</span>
+
+        <button
+            type="button"
+            id="d3MenuClose"
+            class="d3-menu-close"
+            aria-label="Close menu"
+        >
+            &times;
+        </button>
+
+    </div>
+
+    <a href="<?= base_url('design3') ?>">Home <span>↗</span></a>
+    <a href="<?= base_url('design3/about') ?>">About Us <span>↗</span></a>
+    <a href="<?= base_url('design3/services') ?>">Services <span>↗</span></a>
+    <a href="<?= base_url('design3/solutions') ?>">Solutions <span>↗</span></a>
+    <a href="<?= base_url('design3/careers') ?>">Careers <span>↗</span></a>
+    <a href="<?= base_url('design3/contact') ?>">Contact Us <span>↗</span></a>
+    <a href="<?= base_url('design3/get-started') ?>" class="d3-mobile-menu-cta">
+        Get Started Now <span>↗</span>
+    </a>
+
+</nav>
 
 
 <!-- =====================================================
@@ -364,7 +405,7 @@
      DESIGN 3 JAVASCRIPT
 ===================================================== -->
 
-<script src="<?= base_url('assets/js/design3.js') ?>"></script>
+<script src="<?= base_url('assets/js/design3.js') ?>?v=<?= time() ?>"></script>
 
 
 </body>

@@ -166,28 +166,6 @@ document.addEventListener(
 
             }
         );
-
-
-        /* ================================================
-           MENU BUTTON
-        ================================================= */
-
-        if (menuButton) {
-
-            menuButton.addEventListener(
-                "click",
-                function () {
-
-                    menuButton.classList.toggle(
-                        "open"
-                    );
-
-                }
-            );
-
-        }
-
-
         /* ================================================
            MOUSE PARALLAX
         ================================================= */
@@ -484,3 +462,111 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+// =========================================
+// DESIGN 3 - HAMBURGER MENU FUNCTIONALITY
+// =========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.getElementById("d3MenuButton");
+    const mobileMenu = document.getElementById("d3MobileMenu");
+    const menuOverlay = document.getElementById("d3MenuOverlay");
+    const closeButton = document.getElementById("d3MenuClose");
+
+    if (!menuButton || !mobileMenu || !menuOverlay || !closeButton) {
+        console.error("Design 3 menu elements are missing. Check the menu HTML.");
+        return;
+    }
+
+    function openMenu() {
+        mobileMenu.classList.add("is-open");
+        menuOverlay.classList.add("is-open");
+        document.body.classList.add("d3-menu-open");
+        menuButton.classList.add("open");
+
+        menuButton.setAttribute("aria-expanded", "true");
+        menuButton.setAttribute("aria-label", "Close menu");
+    }
+
+    function closeMenu() {
+        mobileMenu.classList.remove("is-open");
+        menuOverlay.classList.remove("is-open");
+        document.body.classList.remove("d3-menu-open");
+        menuButton.classList.remove("open");
+
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open menu");
+    }
+
+    menuButton.addEventListener("click", function () {
+        if (mobileMenu.classList.contains("is-open")) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    closeButton.addEventListener("click", closeMenu);
+    menuOverlay.addEventListener("click", closeMenu);
+
+    mobileMenu.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", closeMenu);
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" &&
+            mobileMenu.classList.contains("is-open")) {
+            closeMenu();
+            menuButton.focus();
+        }
+    });
+});
+
+
+/* DESIGN 3 - RELIABLE HERO IMAGE SLIDER */
+(function () {
+    function initializeHeroSlider() {
+        const slider = document.querySelector(".d3-image-slider");
+
+        if (!slider || slider.dataset.sliderInitialized === "true") {
+            return;
+        }
+
+        const slides = Array.from(
+            slider.querySelectorAll("img.d3-image-slide")
+        );
+
+        if (slides.length < 2) {
+            console.error("Hero slider needs at least 2 images.");
+            return;
+        }
+
+        slider.dataset.sliderInitialized = "true";
+
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            slides.forEach(function (image, i) {
+                image.classList.toggle("active", i === index);
+            });
+        }
+
+        showSlide(currentIndex);
+
+        window.setInterval(function () {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }, 4500);
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener(
+            "DOMContentLoaded",
+            initializeHeroSlider
+        );
+    } else {
+        initializeHeroSlider();
+    }
+})();
+
+

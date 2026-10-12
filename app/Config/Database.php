@@ -190,40 +190,93 @@ class Database extends Config
         ],
     ];
 
-    public function __construct()
+public function __construct()
 {
     parent::__construct();
 
-    // Use Wasmer database environment variables when deployed.
-    $this->default['hostname'] = env(
-        'DB_HOST',
-        $this->default['hostname']
-    );
+    /*
+     * LOCAL DEVELOPMENT
+     * -----------------
+     * Use localhost database.
+     *
+     * WASMER PRODUCTION
+     * -----------------
+     * Use DB_* environment variables.
+     */
 
-    $this->default['username'] = env(
-        'DB_USERNAME',
-        $this->default['username']
-    );
+    if (ENVIRONMENT === 'production') {
 
-    $this->default['password'] = env(
-        'DB_PASSWORD',
-        $this->default['password']
-    );
+        $this->default['hostname'] = env(
+            'DB_HOST',
+            $this->default['hostname']
+        );
 
-    $this->default['database'] = env(
-        'DB_NAME',
-        $this->default['database']
-    );
+        $this->default['username'] = env(
+            'DB_USERNAME',
+            $this->default['username']
+        );
 
-    $this->default['port'] = (int) env(
-        'DB_PORT',
-        $this->default['port']
-    );
+        $this->default['password'] = env(
+            'DB_PASSWORD',
+            $this->default['password']
+        );
 
-    // Ensure that we always set the database group to 'tests'
-    // when running the automated test suite.
+        $this->default['database'] = env(
+            'DB_NAME',
+            $this->default['database']
+        );
+
+        $this->default['port'] = (int) env(
+            'DB_PORT',
+            $this->default['port']
+        );
+    }
+
+    // Use tests database when running PHPUnit
     if (ENVIRONMENT === 'testing') {
         $this->defaultGroup = 'tests';
     }
 }
+
+
+
+
+
+
+//     public function __construct()
+// {
+//     parent::__construct();
+
+//     // Use Wasmer database environment variables when deployed.
+//     $this->default['hostname'] = env(
+//         'DB_HOST',
+//         $this->default['hostname']
+//     );
+
+//     $this->default['username'] = env(
+//         'DB_USERNAME',
+//         $this->default['username']
+//     );
+
+//     $this->default['password'] = env(
+//         'DB_PASSWORD',
+//         $this->default['password']
+//     );
+
+//     $this->default['database'] = env(
+//         'DB_NAME',
+//         $this->default['database']
+//     );
+
+//     $this->default['port'] = (int) env(
+//         'DB_PORT',
+//         $this->default['port']
+//     );
+
+//     // Ensure that we always set the database group to 'tests'
+//     // when running the automated test suite.
+//     if (ENVIRONMENT === 'testing') {
+//         $this->defaultGroup = 'tests';
+//     }
+// }
 }

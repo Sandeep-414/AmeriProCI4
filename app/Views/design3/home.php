@@ -28,7 +28,7 @@
     <!-- LOGO -->
     <a href="<?= base_url('design3') ?>" class="d3-logo">
         <img
-           src="<?= base_url('assets/images/design3/ameripro-logo-footer.png') ?>"
+           src="<?= base_url('assets/images/design3/ameripro-logo.png') ?>"
             alt="AmeriPro Solutions">
     </a>
 
@@ -46,10 +46,10 @@
 
         <div class="d3-nav-dropdown">
 
-    <a href="<?= base_url('design3/services') ?>" class="d3-dropdown">
-        Services
-        <span>⌄</span>
-    </a>
+<a href="<?= base_url('design3/services') ?>" class="d3-dropdown">
+    Services
+    <span class="d3-nav-chevron" aria-hidden="true"></span>
+</a>
 
     <div class="d3-dropdown-menu">
 
@@ -91,10 +91,10 @@
 
        <div class="d3-nav-dropdown">
 
-    <a href="<?= base_url('design3/solutions') ?>" class="d3-dropdown">
-        Solutions
-        <span>⌄</span>
-    </a>
+  <a href="<?= base_url('design3/solutions') ?>" class="d3-dropdown">
+    Solutions
+    <span class="d3-nav-chevron" aria-hidden="true"></span>
+</a>
 
     <div class="d3-dropdown-menu">
 
@@ -141,7 +141,7 @@
    <div class="d3-header-right">
 
     <a
-        href="<?= base_url('design3/login') ?>"
+        href="<?= base_url('design3/get-started') ?>"
         class="d3-start-button">
         Get Started Now
     </a>
@@ -161,6 +161,38 @@
     </div>
 
 </header>
+
+<!-- DESIGN 3 HAMBURGER MENU -->
+<div class="d3-menu-overlay" id="d3MenuOverlay"></div>
+
+<nav class="d3-mobile-menu" id="d3MobileMenu" aria-label="Main navigation">
+
+   <div class="d3-mobile-menu-header">
+    <span>Explore AmeriPro</span>
+
+    <button
+        type="button"
+        id="d3MenuClose"
+        class="d3-menu-close"
+        aria-label="Close menu">
+        &times;
+    </button>
+</div>
+
+    <a href="<?= base_url('design3') ?>">Home <span>↗</span></a>
+    <a href="<?= base_url('design3/about') ?>">About Us <span>↗</span></a>
+    <a href="<?= base_url('design3/services') ?>">Services <span>↗</span></a>
+    <a href="<?= base_url('design3/solutions') ?>">Solutions <span>↗</span></a>
+    <a href="<?= base_url('design3/careers') ?>">Careers <span>↗</span></a>
+    <a href="<?= base_url('design3/contact') ?>">Contact Us <span>↗</span></a>
+
+    <a
+        href="<?= base_url('design3/get-started') ?>"
+        class="d3-mobile-menu-cta">
+        Get Started Now <span>↗</span>
+    </a>
+
+</nav>
 
 
     <!-- =====================================================
@@ -211,16 +243,25 @@
 
                 </a>
 
-            </div>
-
-
-           <div class="d3-home-image d3-software-image">
+            </div>      
+<div class="d3-home-image d3-software-image d3-image-slider">
+    <img
+        src="<?= base_url('assets/images/design3/ft.png') ?>"
+        alt="AmeriPro technology team"
+        class="d3-image-slide active">
 
     <img
-        src="<?= base_url('assets/images/design3/software-maintenance.png') ?>"
-        alt="AmeriPro Software Development and Maintenance">
+        src="<?= base_url('assets/images/design3/design3-slide2.png') ?>"
+        alt="AmeriPro cloud technology"
+        class="d3-image-slide">
+
+    <img
+        src="<?= base_url('assets/images/design3/design3-slide3.png') ?>"
+        alt="AmeriPro team collaboration"
+        class="d3-image-slide">
 
 </div>
+
 
         </div>
         <!-- =====================================================
@@ -541,95 +582,51 @@
         </div>
 
 
-        <div class="d3-clients-grid">
 
+<div class="d3-clients-grid">
 
-            <div class="d3-client-card">
+    <div class="d3-client-card">
+        <img src="<?= base_url('assets/images/design3/healthwave.png') ?>"
+             alt="Healthwave Connect">
+    </div>
 
-                <div class="d3-client-name healthwave">
-                    HEALTHWAVE
-                    <small>CONNECT</small>
-                </div>
+    <div class="d3-client-card">
+        <img src="<?= base_url('assets/images/design3/phoneTree.png') ?>"
+             alt="PhoneTree">
+    </div>
 
-            </div>
+    <div class="d3-client-card">
+        <img src="<?= base_url('assets/images/design3/nextgen.png') ?>"
+             alt="NextGen Healthcare">
+    </div>
 
+    <div class="d3-client-card">
+        <img src="<?= base_url('assets/images/design3/voicewave.png') ?>"
+             alt="VoiceWave Online">
+    </div>
 
-            <div class="d3-client-card">
+    <div class="d3-client-card">
+        <img src="<?= base_url('assets/images/design3/maddox.png') ?>"
+             alt="Maddox">
+    </div>
 
-                <div class="d3-client-name phonetree">
-                    PhoneTree
-                    <small>Proven. Professional. Trusted.</small>
-                </div>
+    <div class="d3-client-card">
+        <img src="<?= base_url('assets/images/design3/church.png') ?>"
+             alt="Church Community Builder">
+    </div>
 
-            </div>
+    <div class="d3-client-card">
+        <img src="<?= base_url('assets/images/design3/pegram.png') ?>"
+             alt="Pegram Insurance">
+    </div>
 
+    <div class="d3-client-card">
+        <img src="<?= base_url('assets/images/design3/nicks.png') ?>"
+             alt="Nick's Building Supply">
+    </div>
 
-            <div class="d3-client-card">
+</div>
 
-                <div class="d3-client-name nextgen">
-                    NEXT<br>
-                    GEN
-                    <small>HEALTHCARE</small>
-                </div>
-
-            </div>
-
-
-            <div class="d3-client-card">
-
-                <div class="d3-client-name voicewave">
-                    VoiceWave
-                    <span>ONLINE</span>
-                </div>
-
-            </div>
-
-
-            <div class="d3-client-card">
-
-                <div class="d3-client-name addox">
-                    addox
-                    <small>INFRASTRUCTURE PVT. LTD.</small>
-                </div>
-
-            </div>
-
-
-            <div class="d3-client-card">
-
-                <div class="d3-client-name church">
-                    ◯◯◯
-                    <small>
-                        CHURCH<br>
-                        COMMUNITY<br>
-                        BUILDER
-                    </small>
-                </div>
-
-            </div>
-
-
-            <div class="d3-client-card">
-
-                <div class="d3-client-name pegram">
-                    PEGRAM
-                    <small>INSURANCE</small>
-                </div>
-
-            </div>
-
-
-            <div class="d3-client-card">
-
-                <div class="d3-client-name nicks">
-                    Nick's
-                    <small>BUILDING SUPPLY, INC.</small>
-                </div>
-
-            </div>
-
-
-        </div>
 
     </section>
 
