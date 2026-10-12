@@ -54,7 +54,7 @@
         Home
     </a>
 
-    <a href="<?= base_url('design3/about') ?>" class="active">
+   <a href="<?= base_url('design3/about') ?>">
         About Us
     </a>
 

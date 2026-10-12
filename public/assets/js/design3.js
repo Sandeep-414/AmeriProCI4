@@ -570,3 +570,36 @@ document.addEventListener("DOMContentLoaded", function () {
 })();
 
 
+
+
+/* =========================================
+   DESIGN 3 - AUTOMATIC ACTIVE NAVBAR LINK
+========================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+    const currentPath =
+        window.location.pathname.replace(/\/+$/, "") || "/";
+
+    const navLinks = document.querySelectorAll(
+        ".d3-nav > a, .d3-nav > .d3-nav-dropdown > a"
+    );
+
+    navLinks.forEach(function (link) {
+        link.classList.remove("active");
+
+        const linkPath =
+            new URL(link.href, window.location.origin)
+                .pathname.replace(/\/+$/, "") || "/";
+
+        const isHome = linkPath === "/design3";
+
+        const matches = isHome
+            ? currentPath === linkPath
+            : currentPath === linkPath ||
+              currentPath.startsWith(linkPath + "/");
+
+        if (matches) {
+            link.classList.add("active");
+        }
+    });
+});

@@ -62,7 +62,6 @@ transition:width .3s ease;
 color:#fff;
 }
 
-.d3-nav a:hover::after,
 .d3-nav a.active::after{
 width:100%;
 }
