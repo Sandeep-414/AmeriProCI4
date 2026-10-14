@@ -37,9 +37,13 @@
                 (336) 510-9305
             </p>
 
-            <p>
-                hr@ameripro-solutions.com
-            </p>
+           
+<p>
+    <a href="mailto:hr@ameripro-solutions.com">
+        hr@ameripro-solutions.com
+    </a>
+</p>
+
 
             <!-- FONT AWESOME SOCIAL MEDIA ICONS -->
             <div class="d3-social-links">

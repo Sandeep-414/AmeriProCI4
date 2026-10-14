@@ -10535,3 +10535,12 @@ body.d3-menu-open {
 .d3-nav .d3-nav-dropdown:hover > .d3-dropdown .d3-nav-chevron {
     transform: rotate(180deg);
 }
+
+.d3-footer-company p a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.d3-footer-company p a:hover {
+    text-decoration: underline;
+}
